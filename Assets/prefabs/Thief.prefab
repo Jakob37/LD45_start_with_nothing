@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8642803410144042847}
   - component: {fileID: 5334883813912173482}
   - component: {fileID: 8188851240808255042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Thief
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708220313802764185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2963854, y: -2.8999996, z: 0}
+  m_LocalPosition: {x: 2.097902, y: -2.8999987, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
