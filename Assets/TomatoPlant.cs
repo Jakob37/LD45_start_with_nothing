@@ -7,7 +7,7 @@ using Random = System.Random;
 
 public class TomatoPlant : MonoBehaviour
 {
-    public GameObject tomato_prefab;
+    public TomatoFruit tomato_prefab;
 
     public Sprite[] frames;
     private float growth_time;
@@ -27,11 +27,13 @@ public class TomatoPlant : MonoBehaviour
     private bool has_tomato;
 
     private List<Vector3> possible_positions;
+    private List<int> filled_positions;
+    private List<TomatoFruit> tomatoes;
 
     void Awake() {
         possible_positions = new List<Vector3>();
-
-
+        filled_positions = new List<int>();
+        tomatoes = new List<TomatoFruit>();
     }
 
     void Start() {
@@ -66,8 +68,44 @@ public class TomatoPlant : MonoBehaviour
         fruit_time_offset = (float)(maturation_time + 0.3);
     }
 
-    void Update() {
+    void prune_tomatoes() {
+        List<TomatoFruit> temp = new List<TomatoFruit>();
+        foreach(TomatoFruit tomato in tomatoes)
+        {
+            if (tomato != null)
+            {
+                temp.Add(tomato);
 
+            }
+        }
+        tomatoes = temp;
+    }
+
+    int get_an_availible_position()
+    {
+        prune_tomatoes();
+
+        List<int> temp_positions = new List<int>();
+        temp_positions.Add(0);
+        temp_positions.Add(1);
+        temp_positions.Add(2);
+        temp_positions.Add(3);
+        temp_positions.Add(4);
+
+        foreach(TomatoFruit tomato in tomatoes)
+        {
+            int unavailible_position = tomato.getPosition();
+            temp_positions.Remove(unavailible_position);
+        }
+
+        if (temp_positions.Count() > 0) {
+            int index = rnd.Next(0, temp_positions.Count);
+            return temp_positions.ElementAt(index);
+        }
+        return -1;
+    }
+
+    void Update() {
         if (growth_time < maturation_time) {
             growth_time = growth_time + Time.deltaTime;
             UpdateGrowth();
@@ -90,12 +128,18 @@ public class TomatoPlant : MonoBehaviour
 
     private void MakeTomato() {
 
-        GameObject tomato = Instantiate(tomato_prefab);
+        int position = get_an_availible_position();
+        if(position < 0)
+        {
+            return;
+        }
+        TomatoFruit tomato = Instantiate(tomato_prefab);
+        tomato.setPosition(position);
 
-        int index = rnd.Next(0, possible_positions.Count);
-        tomato.transform.position = possible_positions[index];
-        possible_positions.RemoveAt(index);
+        tomatoes.Add(tomato);
 
+        tomato.transform.position = possible_positions[position];
+        filled_positions.Add(position);
     }
 
     private void UpdateGrowth() {

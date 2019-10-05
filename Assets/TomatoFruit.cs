@@ -9,8 +9,10 @@ public class TomatoFruit : MonoBehaviour
     private float curr_growth_time;
     private SpriteRenderer renderer;
     private Transform transform;
+    private int plant_position;
 
     public Sprite[] frames;
+    
 
     private float final_height_scale;
 
@@ -18,6 +20,16 @@ public class TomatoFruit : MonoBehaviour
         get {
             return curr_growth_time >= maturation_time;
         }
+    }
+
+    public int getPosition()
+    {
+        return plant_position;
+    }
+
+    public void setPosition(int position)
+    {
+        plant_position = position;
     }
 
     void Awake() {
