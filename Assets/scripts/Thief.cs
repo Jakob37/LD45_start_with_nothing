@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Thief : MonoBehaviour
 {
-    // public float speed;
+    public float speed;
+    public float morale;
     private Transform target;
     private Vector3 currentTarget;
+    private Vector3 startpos;
     private Movement movement;
     private bool is_done;
     private Vector2 start_position;
@@ -22,6 +24,7 @@ public class Thief : MonoBehaviour
         is_done = false;
         LookForNewTarget();
         movement.IsMoving = true;
+
         start_position = gameObject.transform.position;
     }
 
@@ -68,6 +71,14 @@ public class Thief : MonoBehaviour
                 LeaveArea();
                 is_done = true;
             }
+        }
+    }
+
+    public void Scare(float scariness) {
+        print("Enemy HIT");
+        morale -= scariness;
+        if (morale <= 0) {
+          LeaveArea();
         }
     }
 
