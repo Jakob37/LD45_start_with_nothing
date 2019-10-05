@@ -1,56 +1,63 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThiefSpawner : MonoBehaviour
+enum SpawnPattern {
+    AllSides,
+    Horizontal
+}
+
+public class Spawner : MonoBehaviour
 {
     public int spawn_time;
     public int spawn_number;
 
-    public int spawn_time_tomato_guy;
-    public int spawn_number_tomato_guy;
-
-    public GameObject thief_prefab;
-    public GameObject big_tomato_guy_prefab;
+    public GameObject spawn_prefab;
 
     private float current_time;
-    private float current_time_tomato_guy;
+
+    private SpawnPattern spawn_pattern;
+    public bool spawn_sides_only;
+
+    void Start() {
+        
+    }
 
     void Update() {
         current_time += Time.deltaTime;
         if (current_time > spawn_time) {
-            SpawnUnits(thief_prefab, spawn_number);
+            SpawnUnits(spawn_prefab, spawn_number, spawn_sides_only);
             current_time -= spawn_time;
         }
-
-        current_time_tomato_guy += Time.deltaTime;
-        if (current_time_tomato_guy > spawn_time_tomato_guy) {
-            SpawnUnits(big_tomato_guy_prefab, spawn_number_tomato_guy);
-            current_time_tomato_guy -= spawn_time_tomato_guy;
-        }
     }
 
-    private void SpawnUnits(GameObject spawn_prefab, int nbr_units) {
+    private void SpawnUnits(GameObject spawn_prefab, int nbr_units, bool horizontal_sides_only) {
 
         for (int i = 0; i < nbr_units; i++) {
-            InitializeUnit(spawn_prefab);
+            InitializeUnit(spawn_prefab, horizontal_sides_only);
         }
     }
 
-    private void InitializeUnit(GameObject spawn_prefab) {
+    private void InitializeUnit(GameObject spawn_prefab, bool horizontal_sides_only) {
         Instantiate(spawn_prefab);
-        spawn_prefab.transform.position = RandomEdgePosition();
+        spawn_prefab.transform.position = RandomEdgePosition(horizontal_sides_only);
     }
 
-    public static Vector2 RandomEdgePosition() {
+    public static Vector2 RandomEdgePosition(bool horizontal_sides_only) {
 
         Vector2 left_positions = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
         Vector2 right_positions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 
         float padding = 0.5f;
 
-        int side = UnityEngine.Random.Range(0, 3);
+        int side;
+        if (!horizontal_sides_only) {
+            side = Random.Range(0, 3);
+        }
+        else {
+            side = Random.Range(0, 1) * 2 + 1;
+        }
+
         float xpos = 0;
         float ypos = 0;
 
