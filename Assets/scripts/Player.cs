@@ -12,7 +12,6 @@ public class Player : MonoBehaviour {
 
     // private SpriteRenderer sprite_renderer;
     private Rigidbody2D rigi;
-
     private Inventory inventory;
 
     void Awake() {
