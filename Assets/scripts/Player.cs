@@ -108,5 +108,12 @@ public class Player : MonoBehaviour {
             inventory.AddSeed();
             Destroy(coll.gameObject);
         }
+        else if (coll.gameObject.GetComponent<TomatoFruit>() != null) {
+            TomatoFruit tomato = coll.gameObject.GetComponent<TomatoFruit>();
+            if (tomato.IsRipe()) {
+                inventory.AddTomato();
+                Destroy(coll.gameObject);
+            }
+        }
     }
 }
