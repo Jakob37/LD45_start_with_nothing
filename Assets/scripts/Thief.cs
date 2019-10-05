@@ -14,12 +14,31 @@ public class Thief : MonoBehaviour
     }
 
     void Start() {
-        currentTarget = target.position;
+
+        TomatoFruit[] tomato_fruits = FindObjectsOfType<TomatoFruit>();
+
+        print(tomato_fruits.Length);
+
+        if (tomato_fruits.Length > 0) {
+            TomatoFruit target_fruit = tomato_fruits[UnityEngine.Random.Range(0, tomato_fruits.Length - 1)];
+            target = target_fruit.gameObject.transform;
+            currentTarget = target.position;
+        }
+        else {
+            LeaveArea();
+        }
+
         movement.IsMoving = true;
     }
 
     void Update() {
-        float step =  speed * Time.deltaTime; // calculate distance to move
+        if (target != null) {
+            PerformMove();
+        }
+    }
+
+    private void PerformMove() {
+        float step = speed * Time.deltaTime; // calculate distance to move
         var prior_position_x = transform.position.x;
         transform.position = Vector2.MoveTowards(transform.position, currentTarget, step);
         movement.IsFlipped = prior_position_x < transform.position.x;
@@ -30,8 +49,12 @@ public class Thief : MonoBehaviour
             TomatoFruit tomato = coll.gameObject.GetComponent<TomatoFruit>();
             if (tomato.IsRipe()) {
                 Destroy(tomato.gameObject);
-                currentTarget = new Vector3(0,0,0);
+                LeaveArea();
             }
         }
+    }
+
+    private void LeaveArea() {
+        currentTarget = new Vector3(0, 0, 0);
     }
 }
