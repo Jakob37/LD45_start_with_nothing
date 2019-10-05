@@ -5,6 +5,7 @@ using UnityEngine;
 public class BigTomatoGuy : MonoBehaviour
 {
     // public float speed;
+    public float morale;
     private Transform target;
     private Vector3 currentTarget;
     private Movement movement;
@@ -66,6 +67,14 @@ public class BigTomatoGuy : MonoBehaviour
             Destroy(tomato_plant.gameObject);
             LeaveArea();
             is_done = true;
+        }
+    }
+
+    public void Scare(float scariness) {
+        print("Enemy HIT");
+        morale -= scariness;
+        if (morale <= 0) {
+          LeaveArea();
         }
     }
 

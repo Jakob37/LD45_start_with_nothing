@@ -22,9 +22,12 @@ public class PlayerAttack : MonoBehaviour
               Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 
               for (int i = 0; i < enemiesToDamage.Length; i++) {
-                  enemiesToDamage[i].GetComponent<Thief>().Scare(damage);
-
-                  //enemiesToDamage[i].gameObject);
+                  if (enemiesToDamage[i].GetComponent<Thief>() != null) {
+                      enemiesToDamage[i].GetComponent<Thief>().Scare(damage);
+                  }
+                  else if (enemiesToDamage[i].GetComponent<BigTomatoGuy>() != null) {
+                      enemiesToDamage[i].GetComponent<BigTomatoGuy>().Scare(damage);
+                  }
               }
             }
             timeBtwAttack = startTimeBtwAttack;
