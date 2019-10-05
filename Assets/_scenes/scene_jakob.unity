@@ -581,12 +581,65 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4050835264421948, guid: 7fb77674f798cdf44a854b2e3e093b65, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050835264421948, guid: 7fb77674f798cdf44a854b2e3e093b65, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212189436403623318, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6438862032139102022, guid: b954d20eeb61016458b4bdaa1a702ea6,
+        type: 3}
+    - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: frames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
         type: 3}
       propertyPath: grave_sprite
       value: 
       objectReference: {fileID: 21300000, guid: 56562c4c257c5e44c926c93409f38657,
         type: 3}
+    - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: frames.Array.data[2]
+      value: 
+      objectReference: {fileID: 6438862032139102022, guid: b954d20eeb61016458b4bdaa1a702ea6,
+        type: 3}
+    - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: frames.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 56562c4c257c5e44c926c93409f38657,
+        type: 3}
+    - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: frames.Array.data[1]
+      value: 
+      objectReference: {fileID: 8337063234793068588, guid: b954d20eeb61016458b4bdaa1a702ea6,
+        type: 3}
+    - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: frames.Array.data[0]
+      value: 
+      objectReference: {fileID: 6438862032139102022, guid: b954d20eeb61016458b4bdaa1a702ea6,
+        type: 3}
+    - target: {fileID: 61266406782676472, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 61266406782676472, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fb77674f798cdf44a854b2e3e093b65, type: 3}
 --- !u!4 &705028423 stripped
