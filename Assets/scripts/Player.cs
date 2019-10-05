@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
     private int current_walk_frame;
 
     public float move_speed = 0.01f;
-    public Sprite grave_sprite;
+    public Sprite dead_sprite;
     private bool alive = true;
 
     private SpriteRenderer sprite_renderer;
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour {
     }
 
     public void Died() {
-        sprite_renderer.sprite = grave_sprite;
+        sprite_renderer.sprite = dead_sprite;
         alive = false;
     }
 }
