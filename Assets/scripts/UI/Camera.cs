@@ -15,6 +15,6 @@ public class Camera : MonoBehaviour {
 	
 	void Update () {
 
-        transform.position = new Vector3(center_trans.position.x, center_trans.position.y, orig_pos.z);
+        // transform.position = new Vector3(center_trans.position.x, center_trans.position.y, orig_pos.z);
 	}
 }
