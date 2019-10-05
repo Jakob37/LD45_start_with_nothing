@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fe63f788cdc3042895301168aa61c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 0.2
   target: {fileID: 1677090572}
 --- !u!4 &1677090572 stripped
 Transform:
@@ -865,6 +865,11 @@ PrefabInstance:
     - target: {fileID: 4050835264421948, guid: 5238e28d05d41b844bf1f6ebd6fe3690, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370462576561130763, guid: 5238e28d05d41b844bf1f6ebd6fe3690,
+        type: 3}
+      propertyPath: maturation_time
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5238e28d05d41b844bf1f6ebd6fe3690, type: 3}
@@ -962,12 +967,12 @@ PrefabInstance:
     - target: {fileID: 1708220313802764191, guid: 7d14946af9e2c04478787b9c16f36b4d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.68
+      value: 2.67
       objectReference: {fileID: 0}
     - target: {fileID: 1708220313802764191, guid: 7d14946af9e2c04478787b9c16f36b4d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.67
+      value: -3.98
       objectReference: {fileID: 0}
     - target: {fileID: 1708220313802764191, guid: 7d14946af9e2c04478787b9c16f36b4d,
         type: 3}
@@ -1023,6 +1028,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708220313802764190, guid: 7d14946af9e2c04478787b9c16f36b4d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d14946af9e2c04478787b9c16f36b4d, type: 3}
