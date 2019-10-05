@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0de4cb3fb19d741a87fe7e1b502896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tomato_prefab: {fileID: 1837737469016201556, guid: f55fdb7c06e9119439e0825c33bff05e,
+  tomato_prefab: {fileID: 3697276037375532864, guid: f55fdb7c06e9119439e0825c33bff05e,
     type: 3}
   frames:
   - {fileID: 1211998406744890917, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
