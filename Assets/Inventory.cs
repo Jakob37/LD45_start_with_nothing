@@ -33,6 +33,11 @@ public class Inventory : MonoBehaviour
         inv_text.SetText("Tomatoes: " + tomatoes + "\n" + "Seeds: " + seeds);
     }
 
+    public void BuySeed(int price) {
+        seeds += 1;
+        tomatoes -= price;
+    }
+
     public void AddTomato() {
         tomatoes += 1;
     }

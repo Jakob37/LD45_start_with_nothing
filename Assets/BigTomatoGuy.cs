@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thief : MonoBehaviour
+public class BigTomatoGuy : MonoBehaviour
 {
     // public float speed;
     private Transform target;
@@ -30,7 +30,7 @@ public class Thief : MonoBehaviour
             LookForNewTarget();
         }
         PerformMove();
-        
+
         if (is_done && HasReachedEndPosition(dist_to_end)) {
             Destroy(gameObject);
         }
@@ -48,9 +48,9 @@ public class Thief : MonoBehaviour
     }
 
     private void LookForNewTarget() {
-        TomatoFruit[] tomato_fruits = FindObjectsOfType<TomatoFruit>();
+        TomatoPlant[] tomato_fruits = FindObjectsOfType<TomatoPlant>();
         if (tomato_fruits.Length > 0) {
-            TomatoFruit target_fruit = tomato_fruits[UnityEngine.Random.Range(0, tomato_fruits.Length - 1)];
+            TomatoPlant target_fruit = tomato_fruits[UnityEngine.Random.Range(0, tomato_fruits.Length - 1)];
             target = target_fruit.gameObject.transform;
             currentTarget = target.position;
         }
@@ -61,13 +61,11 @@ public class Thief : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.gameObject.GetComponent<TomatoFruit>() != null) {
-            TomatoFruit tomato = coll.gameObject.GetComponent<TomatoFruit>();
-            if (tomato.IsRipe()) {
-                Destroy(tomato.gameObject);
-                LeaveArea();
-                is_done = true;
-            }
+        if (coll.gameObject.GetComponent<TomatoPlant>() != null) {
+            TomatoPlant tomato_plant = coll.gameObject.GetComponent<TomatoPlant>();
+            Destroy(tomato_plant.gameObject);
+            LeaveArea();
+            is_done = true;
         }
     }
 

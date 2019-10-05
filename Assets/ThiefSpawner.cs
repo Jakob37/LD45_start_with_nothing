@@ -8,33 +8,39 @@ public class ThiefSpawner : MonoBehaviour
     public int spawn_time;
     public int spawn_number;
 
+    public int spawn_time_tomato_guy;
+    public int spawn_number_tomato_guy;
+
     public GameObject thief_prefab;
+    public GameObject big_tomato_guy_prefab;
 
     private float current_time;
-
-    void Start() {
-        
-    }
+    private float current_time_tomato_guy;
 
     void Update() {
         current_time += Time.deltaTime;
         if (current_time > spawn_time) {
-            SpawnThieves(spawn_number);
+            SpawnUnits(thief_prefab, spawn_number);
             current_time -= spawn_time;
         }
-    }
 
-    private void SpawnThieves(int nbr_thieves) {
-
-        for (int i = 0; i < nbr_thieves; i++) {
-            InitializeThief();
-            print("Initializing thief!");
+        current_time_tomato_guy += Time.deltaTime;
+        if (current_time_tomato_guy > spawn_time_tomato_guy) {
+            SpawnUnits(big_tomato_guy_prefab, spawn_number_tomato_guy);
+            current_time_tomato_guy -= spawn_time_tomato_guy;
         }
     }
 
-    private void InitializeThief() {
-        Instantiate(thief_prefab);
-        thief_prefab.transform.position = RandomEdgePosition();
+    private void SpawnUnits(GameObject spawn_prefab, int nbr_units) {
+
+        for (int i = 0; i < nbr_units; i++) {
+            InitializeUnit(spawn_prefab);
+        }
+    }
+
+    private void InitializeUnit(GameObject spawn_prefab) {
+        Instantiate(spawn_prefab);
+        spawn_prefab.transform.position = RandomEdgePosition();
     }
 
     public static Vector2 RandomEdgePosition() {
