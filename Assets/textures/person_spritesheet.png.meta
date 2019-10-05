@@ -11,6 +11,12 @@ TextureImporter:
   - first:
       213: -2320061051777747270
     second: person_spritesheet_2
+  - first:
+      213: -7543076018123570421
+    second: person_spritesheet_3
+  - first:
+      213: -4406329636228016505
+    second: person_spritesheet_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -121,7 +127,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5821cb976de15fb43a62dcc8f5d8f43a
+      spriteID: 5ee90e8c8848e1846b18491a637d2c29
       internalID: 6438862032139102022
       vertices: []
       indices: 
@@ -142,7 +148,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14457a73913b99440aa53b503b65f303
+      spriteID: 8fcd00e11a0358247bad466c6b2d5f29
       internalID: 8337063234793068588
       vertices: []
       indices: 
@@ -163,8 +169,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87f7fb5e93622a740a34bad045fa089c
+      spriteID: 6ba8fe0a7551f894bb35e6c2877e0e64
       internalID: -2320061051777747270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 32
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d9ba868102c8b4ab6af774eba38776
+      internalID: -7543076018123570421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 32
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c062f378c3635034f84a3106df56458e
+      internalID: -4406329636228016505
       vertices: []
       indices: 
       edges: []

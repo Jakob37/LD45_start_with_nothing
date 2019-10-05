@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class TomatoFruit : MonoBehaviour
     private float curr_growth_time;
     private SpriteRenderer renderer;
     private Transform transform;
+
+    public Sprite[] frames;
 
     private float final_height_scale;
 
@@ -19,9 +22,6 @@ public class TomatoFruit : MonoBehaviour
 
     void Awake() {
         renderer = GetComponent<SpriteRenderer>();
-        transform = gameObject.transform;
-        final_height_scale = transform.localScale.y;
-        transform.localScale = new Vector2(0, 0);
     }
 
     void Start() {
@@ -42,10 +42,13 @@ public class TomatoFruit : MonoBehaviour
 
     private void UpdateMaturationStage() {
         float tomato_scale = (curr_growth_time / maturation_time) * final_height_scale;
-        transform.localScale = new Vector2(tomato_scale, tomato_scale);
 
-        // if (!IsRipe()) {
-        //     renderer.color = new 
-        // }
+        int index = Math.Min(
+            frames.Length - 1,
+            (int)Math.Floor(curr_growth_time / maturation_time * frames.Length));
+
+        print("tomato index is:" + index);
+
+        this.GetComponent<SpriteRenderer>().sprite = frames[index];
     }
 }
