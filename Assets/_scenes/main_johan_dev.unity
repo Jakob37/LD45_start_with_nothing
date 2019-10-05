@@ -148,7 +148,7 @@ MonoBehaviour:
   attackPos: {fileID: 1603483102}
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1024
   attackRange: 0.06
   damage: 1
 --- !u!1001 &250061906
@@ -775,7 +775,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.07, y: 0.13}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -986,6 +986,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BasicEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708220313802764185, guid: 7d14946af9e2c04478787b9c16f36b4d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1708220313802764191, guid: 7d14946af9e2c04478787b9c16f36b4d,
         type: 3}
