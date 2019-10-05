@@ -73,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: -953886835
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 56562c4c257c5e44c926c93409f38657, type: 3}
+  m_Sprite: {fileID: 6438862032139102022, guid: b954d20eeb61016458b4bdaa1a702ea6,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 21300000, guid: 56562c4c257c5e44c926c93409f38657, type: 3}
-  - {fileID: 21300000, guid: 56562c4c257c5e44c926c93409f38657, type: 3}
+  - {fileID: 6438862032139102022, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
+  - {fileID: 8337063234793068588, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
   walk_anim_time: 0.3
   tomato_plant_prefab: {fileID: 1890638100109868, guid: 5238e28d05d41b844bf1f6ebd6fe3690,
     type: 3}
@@ -142,7 +143,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.1, y: 0.15}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
