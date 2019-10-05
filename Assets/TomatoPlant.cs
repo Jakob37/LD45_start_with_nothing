@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,12 @@ public class TomatoPlant : MonoBehaviour
 {
     public GameObject tomato_prefab;
 
+    public Sprite[] frames;
     private float growth_time;
     private float tomato_growth_time;
+
+    private List<Sprite> grow_frames;
+
 
     public float maturation_time;
     public float tomato_maturation_time;
@@ -18,9 +23,9 @@ public class TomatoPlant : MonoBehaviour
     private bool has_tomato;
 
     void Awake() {
-        transform = gameObject.transform;
-        final_height_scale = transform.localScale.y;
-        transform.localScale = new Vector2(0, 0);
+        //transform = gameObject.transform;
+        //final_height_scale = transform.localScale.y;
+        //transform.localScale = new Vector2(0, 0);
     }
 
     void Start() {
@@ -48,7 +53,18 @@ public class TomatoPlant : MonoBehaviour
 
     private void UpdateGrowth() {
         float growth_scale = (growth_time / maturation_time) * final_height_scale;
-        transform.localScale = new Vector3(0.3f, growth_scale, 1);
+
+        int index = Math.Min(
+            frames.Length - 1,
+            (int)Math.Floor(growth_time / maturation_time * frames.Length));
+
+     
+        print("index is: " + index);
+
+        this.GetComponent<SpriteRenderer>().sprite = frames[index];
+
+        print(frames[0]);
+
     }
 
 }

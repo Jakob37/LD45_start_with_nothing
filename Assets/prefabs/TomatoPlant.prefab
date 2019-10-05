@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1890638100109868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.22, y: -4.18, z: 0}
-  m_LocalScale: {x: 0.3, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 56562c4c257c5e44c926c93409f38657, type: 3}
-  m_Color: {r: 0.032529376, g: 0.4056604, b: 0.06793413, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,7 +106,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.16}
+  m_Size: {x: 0.04, y: 0.04}
   m_EdgeRadius: 0
 --- !u!114 &2370462576561130763
 MonoBehaviour:
@@ -122,5 +122,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tomato_prefab: {fileID: 1837737469016201556, guid: f55fdb7c06e9119439e0825c33bff05e,
     type: 3}
+  frames:
+  - {fileID: 1211998406744890917, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
+  - {fileID: -2423230811885516303, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
+  - {fileID: -5082647686934749709, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
+  - {fileID: 6813553822765877458, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
+  - {fileID: 6708733205153277002, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
   maturation_time: 3
   tomato_maturation_time: 0
