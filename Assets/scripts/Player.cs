@@ -4,6 +4,9 @@ public class Player : MonoBehaviour {
 
     public Sprite[] frames;
     public float walk_anim_time = 1f;
+
+    public GameObject tomato_plant_prefab;
+
     private float current_walk_time;
     private int current_walk_frame;
 
@@ -14,12 +17,17 @@ public class Player : MonoBehaviour {
     private SpriteRenderer sprite_renderer;
     private Rigidbody2D rigi;
 
+    private Inventory inventory;
     private bool is_moving;
     private bool is_flipped;
 
-	void Start () {
+    void Awake() {
         sprite_renderer = GetComponent<SpriteRenderer>();
         rigi = GetComponent<Rigidbody2D>();
+        inventory = GetComponent<Inventory>();
+    }
+
+    void Start () {
         is_moving = false;
         is_flipped = false;
 	}
@@ -36,6 +44,16 @@ public class Player : MonoBehaviour {
                 current_walk_time = 0;
             }
         }
+        
+        if (Input.GetKeyDown(KeyCode.Space) && inventory.Seeds > 0) {
+            PlantTomatoPlant();
+            inventory.PlantSeed();
+        }
+    }
+
+    private void PlantTomatoPlant() {
+        GameObject plant = Instantiate(tomato_plant_prefab);
+        plant.transform.position = gameObject.transform.position;
     }
 
     private void ShiftWalkFrame() {
@@ -82,5 +100,13 @@ public class Player : MonoBehaviour {
     public void Died() {
         sprite_renderer.sprite = dead_sprite;
         alive = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D coll) {
+
+        if (coll.gameObject.GetComponent<TomatoSeed>() != null) {
+            inventory.AddSeed();
+            Destroy(coll.gameObject);
+        }
     }
 }
