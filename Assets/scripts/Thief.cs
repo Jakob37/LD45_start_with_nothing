@@ -8,33 +8,36 @@ public class Thief : MonoBehaviour
     public Transform target;
     private Vector3 currentTarget;
     private Movement movement;
+    private bool is_done;
+    private Vector2 start_position;
+    private float dist_to_end;
 
     void Awake() {
+        dist_to_end = 0.1f;
         movement = GetComponent<Movement>();
     }
 
     void Start() {
 
-        TomatoFruit[] tomato_fruits = FindObjectsOfType<TomatoFruit>();
-
-        print(tomato_fruits.Length);
-
-        if (tomato_fruits.Length > 0) {
-            TomatoFruit target_fruit = tomato_fruits[UnityEngine.Random.Range(0, tomato_fruits.Length - 1)];
-            target = target_fruit.gameObject.transform;
-            currentTarget = target.position;
-        }
-        else {
-            LeaveArea();
-        }
-
+        is_done = false;
+        LookForNewTarget();
         movement.IsMoving = true;
+        start_position = gameObject.transform.position;
     }
 
     void Update() {
-        if (target != null) {
-            PerformMove();
+        if (target == null && !is_done) {
+            LookForNewTarget();
         }
+        PerformMove();
+        
+        if (is_done && HasReachedEndPosition(dist_to_end)) {
+            Destroy(gameObject);
+        }
+    }
+
+    private bool HasReachedEndPosition(float dist_to_end) {
+        return Vector2.Distance(transform.position, start_position) < dist_to_end;
     }
 
     private void PerformMove() {
@@ -44,17 +47,31 @@ public class Thief : MonoBehaviour
         movement.IsFlipped = prior_position_x < transform.position.x;
     }
 
+    private void LookForNewTarget() {
+        TomatoFruit[] tomato_fruits = FindObjectsOfType<TomatoFruit>();
+        if (tomato_fruits.Length > 0) {
+            TomatoFruit target_fruit = tomato_fruits[UnityEngine.Random.Range(0, tomato_fruits.Length - 1)];
+            target = target_fruit.gameObject.transform;
+            currentTarget = target.position;
+        }
+        else {
+            is_done = true;
+            LeaveArea();
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.GetComponent<TomatoFruit>() != null) {
             TomatoFruit tomato = coll.gameObject.GetComponent<TomatoFruit>();
             if (tomato.IsRipe()) {
                 Destroy(tomato.gameObject);
                 LeaveArea();
+                is_done = true;
             }
         }
     }
 
     private void LeaveArea() {
-        currentTarget = new Vector3(0, 0, 0);
+        currentTarget = start_position;
     }
 }
