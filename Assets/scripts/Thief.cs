@@ -5,8 +5,10 @@ using UnityEngine;
 public class Thief : MonoBehaviour
 {
     public float speed;
+    public float morale;
     public Transform target;
     private Vector3 currentTarget;
+    private Vector3 startpos;
     private Movement movement;
 
     void Awake() {
@@ -29,10 +31,11 @@ public class Thief : MonoBehaviour
         }
 
         movement.IsMoving = true;
+        startpos = transform.position;
     }
 
     void Update() {
-        if (target != null) {
+        if (currentTarget != null) {
             PerformMove();
         }
     }
@@ -54,7 +57,15 @@ public class Thief : MonoBehaviour
         }
     }
 
+    public void Scare(float scariness) {
+        print("Enemy HIT");
+        morale -= scariness;
+        if (morale <= 0) {
+          LeaveArea();
+        }
+    }
+
     private void LeaveArea() {
-        currentTarget = new Vector3(0, 0, 0);
+        currentTarget = startpos;
     }
 }

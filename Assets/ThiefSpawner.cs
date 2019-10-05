@@ -41,21 +41,21 @@ public class ThiefSpawner : MonoBehaviour
         Vector2 left_positions = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
         Vector2 right_positions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 
-        int side = UnityEngine.Random.Range(0, 3);
+        int side = UnityEngine.Random.Range(0, 4);
         float xpos = 0;
         float ypos = 0;
 
         if (side == 0) {
-            ypos = left_positions.y;
+            ypos = left_positions.y - 2;
         }
         else if (side == 1) {
-            xpos = right_positions.x;
+            xpos = right_positions.x + 2;
         }
         else if (side == 2) {
-            ypos = right_positions.y;
+            ypos = right_positions.y + 2;
         }
         else {
-            xpos = right_positions.y;
+            xpos = left_positions.x - 2;
         }
 
         if (side == 0 || side == 2) {
