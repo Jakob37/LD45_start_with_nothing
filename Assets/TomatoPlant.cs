@@ -58,13 +58,6 @@ public class TomatoPlant : MonoBehaviour
             frames.Length - 1,
             (int)Math.Floor(growth_time / maturation_time * frames.Length));
 
-     
-        print("index is: " + index);
-
         this.GetComponent<SpriteRenderer>().sprite = frames[index];
-
-        print(frames[0]);
-
     }
-
 }
