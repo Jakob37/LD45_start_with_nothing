@@ -8,54 +8,63 @@ public class ThiefSpawner : MonoBehaviour
     public int spawn_time;
     public int spawn_number;
 
+    public int spawn_time_tomato_guy;
+    public int spawn_number_tomato_guy;
+
     public GameObject thief_prefab;
+    public GameObject big_tomato_guy_prefab;
 
     private float current_time;
-
-    void Start() {
-        
-    }
+    private float current_time_tomato_guy;
 
     void Update() {
         current_time += Time.deltaTime;
         if (current_time > spawn_time) {
-            SpawnThieves(spawn_number);
+            SpawnUnits(thief_prefab, spawn_number);
             current_time -= spawn_time;
         }
-    }
 
-    private void SpawnThieves(int nbr_thieves) {
-        for (int i = 0; i < nbr_thieves; i++) {
-            InitializeThief();
-            print("Initializing thief!");
+        current_time_tomato_guy += Time.deltaTime;
+        if (current_time_tomato_guy > spawn_time_tomato_guy) {
+            SpawnUnits(big_tomato_guy_prefab, spawn_number_tomato_guy);
+            current_time_tomato_guy -= spawn_time_tomato_guy;
         }
     }
 
-    private void InitializeThief() {
-        Instantiate(thief_prefab);
-        thief_prefab.transform.position = RandomEdgePosition();
+    private void SpawnUnits(GameObject spawn_prefab, int nbr_units) {
+
+        for (int i = 0; i < nbr_units; i++) {
+            InitializeUnit(spawn_prefab);
+        }
     }
 
-    private Vector2 RandomEdgePosition() {
+    private void InitializeUnit(GameObject spawn_prefab) {
+        Instantiate(spawn_prefab);
+        spawn_prefab.transform.position = RandomEdgePosition();
+    }
+
+    public static Vector2 RandomEdgePosition() {
 
         Vector2 left_positions = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
         Vector2 right_positions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 
-        int side = UnityEngine.Random.Range(0, 4);
+        float padding = 0.5f;
+
+        int side = UnityEngine.Random.Range(0, 3);
         float xpos = 0;
         float ypos = 0;
 
         if (side == 0) {
-            ypos = left_positions.y - 2;
+            ypos = left_positions.y - padding;
         }
         else if (side == 1) {
-            xpos = right_positions.x + 2;
+            xpos = right_positions.x + padding;
         }
         else if (side == 2) {
-            ypos = right_positions.y + 2;
+            ypos = right_positions.y + padding;
         }
         else {
-            xpos = left_positions.x - 2;
+            xpos = right_positions.x - padding;
         }
 
         if (side == 0 || side == 2) {
