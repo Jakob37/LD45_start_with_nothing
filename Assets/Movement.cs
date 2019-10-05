@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed;
-
     private bool is_moving;
     public bool IsMoving {
         get {

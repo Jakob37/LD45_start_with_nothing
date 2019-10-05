@@ -6,61 +6,45 @@ public class Thief : MonoBehaviour
 {
     public float speed;
     public float morale;
-    private Transform target;
+    public Transform target;
     private Vector3 currentTarget;
     private Vector3 startpos;
     private Movement movement;
-    private bool is_done;
-    private Vector2 start_position;
-    private float dist_to_end;
 
     void Awake() {
-        dist_to_end = 0.1f;
         movement = GetComponent<Movement>();
     }
 
     void Start() {
 
-        is_done = false;
-        LookForNewTarget();
-        movement.IsMoving = true;
-
-        start_position = gameObject.transform.position;
-    }
-
-    void Update() {
-        if (target == null && !is_done) {
-            LookForNewTarget();
-        }
-        PerformMove();
-        
-        if (is_done && HasReachedEndPosition(dist_to_end)) {
-            Destroy(gameObject);
-        }
-    }
-
-    private bool HasReachedEndPosition(float dist_to_end) {
-        return Vector2.Distance(transform.position, start_position) < dist_to_end;
-    }
-
-    private void PerformMove() {
-        float step = movement.speed * Time.deltaTime; // calculate distance to move
-        var prior_position_x = transform.position.x;
-        transform.position = Vector2.MoveTowards(transform.position, currentTarget, step);
-        movement.IsFlipped = prior_position_x < transform.position.x;
-    }
-
-    private void LookForNewTarget() {
         TomatoFruit[] tomato_fruits = FindObjectsOfType<TomatoFruit>();
+
+        print(tomato_fruits.Length);
+
         if (tomato_fruits.Length > 0) {
             TomatoFruit target_fruit = tomato_fruits[UnityEngine.Random.Range(0, tomato_fruits.Length - 1)];
             target = target_fruit.gameObject.transform;
             currentTarget = target.position;
         }
         else {
-            is_done = true;
             LeaveArea();
         }
+
+        movement.IsMoving = true;
+        startpos = transform.position;
+    }
+
+    void Update() {
+        if (currentTarget != null) {
+            PerformMove();
+        }
+    }
+
+    private void PerformMove() {
+        float step = speed * Time.deltaTime; // calculate distance to move
+        var prior_position_x = transform.position.x;
+        transform.position = Vector2.MoveTowards(transform.position, currentTarget, step);
+        movement.IsFlipped = prior_position_x < transform.position.x;
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
@@ -69,7 +53,6 @@ public class Thief : MonoBehaviour
             if (tomato.IsRipe()) {
                 Destroy(tomato.gameObject);
                 LeaveArea();
-                is_done = true;
             }
         }
     }
@@ -83,6 +66,6 @@ public class Thief : MonoBehaviour
     }
 
     private void LeaveArea() {
-        currentTarget = start_position;
+        currentTarget = startpos;
     }
 }
