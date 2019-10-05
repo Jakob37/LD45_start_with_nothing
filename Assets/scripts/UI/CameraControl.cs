@@ -11,7 +11,7 @@ public class CameraControl : MonoBehaviour
   private Camera cam;
   private float targetZoom;
   private float zoomFactor = 3f;
-  private float zoomLerpSpeed = 10;
+  private float smoothTime = 0.3f;
 
   void Start () {
     //center_trans = GameObject.FindObjectOfType<Player>().gameObject.transform;
@@ -34,7 +34,7 @@ public class CameraControl : MonoBehaviour
 
     targetZoom -= scrollData * zoomFactor;
     targetZoom = Mathf.Clamp(targetZoom, 1.5f, 8f);
-    cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomLerpSpeed);
+    cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetZoom, ref smoothTime, Time.deltaTime);
 
   }
 }
