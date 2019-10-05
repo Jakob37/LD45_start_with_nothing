@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-  //public Transform center_trans;
-
-  //private Vector3 orig_pos;
-
   private Camera cam;
   private float targetZoom;
-  private float zoomFactor = 3f;
-  private float smoothTime = 0.3f;
+  private float zoomFactor = 0f;
+  private float smoothTime = 4.3f;
 
   void Start () {
-    //center_trans = GameObject.FindObjectOfType<Player>().gameObject.transform;
-    //orig_pos = transform.position;
-
     cam = Camera.main;
     targetZoom = cam.orthographicSize;
   }
@@ -27,14 +20,21 @@ public class CameraControl : MonoBehaviour
 
   void Update () {
 
-   //transform.position = new Vector3(center_trans.position.x, center_trans.position.y, orig_pos.z);
+    if (Input.GetKeyDown(KeyCode.Alpha1)) {
+      targetZoom = 1;
+    }
 
-    float scrollData;
-    scrollData = Input.GetAxis("Mouse ScrollWheel");
+    if (Input.GetKeyDown(KeyCode.Alpha2)) {
+      targetZoom = 3;
+    }
 
-    targetZoom -= scrollData * zoomFactor;
-    targetZoom = Mathf.Clamp(targetZoom, 1.5f, 8f);
-    cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetZoom, ref smoothTime, Time.deltaTime);
+    //float scrollData;
+    //scrollData = Input.GetAxis("Mouse ScrollWheel");
 
+    //targetZoom -= scrollData * zoomFactor;
+    //targetZoom = Mathf.Clamp(targetZoom, 1.5f, 8f);
+    //cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetZoom, ref smoothTime, Time.deltaTime);
+
+    cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetZoom, ref smoothTime, 1f);
   }
 }
