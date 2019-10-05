@@ -1303,6 +1303,7 @@ Transform:
   - {fileID: 1927767340}
   - {fileID: 2323422235848224485}
   - {fileID: 1083846064442942296}
+  - {fileID: 4726801250601563908}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2190,6 +2191,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5661694270593047874}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1469350877763058970
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1190886284}
+    m_Modifications:
+    - target: {fileID: 6196062925334235672, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_Name
+      value: BigTomatoLady
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff1266a92ead15a4bab08cf0824a82ee, type: 3}
 --- !u!1001 &1839232246984497584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2275,6 +2345,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 614276033967089294}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4726801250601563908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6196062925334235678, guid: ff1266a92ead15a4bab08cf0824a82ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 1469350877763058970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5661694270593047874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2355,10 +2431,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7258201952994659324, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+    - target: {fileID: 1727030615809944624, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: m_Name
+      value: BigTomatoLady
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329022218500952402, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: m_Name
+      value: BigTomatoGuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728857, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: m_Name
       value: ThiefSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: big_tomato_guy_prefab
+      value: 
+      objectReference: {fileID: 265176506}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258201952994659324, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawners
       objectReference: {fileID: 0}
     - target: {fileID: 7258201952994659327, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
@@ -2415,10 +2514,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7258201952994659325, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: big_tomato_guy_prefab
-      value: 
-      objectReference: {fileID: 265176506}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9981a9a5fcdaaf41af83e8e929ab46e, type: 3}

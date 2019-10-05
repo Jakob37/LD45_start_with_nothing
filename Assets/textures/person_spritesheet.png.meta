@@ -23,6 +23,9 @@ TextureImporter:
   - first:
       213: -9139368156053419506
     second: person_spritesheet_6
+  - first:
+      213: -2892359355727195273
+    second: person_spritesheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -133,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51e56daa5b87f143a49ea42426a9b50
+      spriteID: ddd4932bf07ca484797b05e8f32e538f
       internalID: 6438862032139102022
       vertices: []
       indices: 
@@ -154,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1afbe21c4c46f3941983afe40209e4f2
+      spriteID: 7d2590c6f0ac1224eb83dd5dd3151456
       internalID: 8337063234793068588
       vertices: []
       indices: 
@@ -175,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b01cd6b3fa1b7478f215525fe4eccb
+      spriteID: f9a0076b84890b045a11f148b5aa5083
       internalID: -2320061051777747270
       vertices: []
       indices: 
@@ -196,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 589e5b44404883a46bf94f403ca26671
+      spriteID: e61c36793b3192a40858ca60b3825066
       internalID: -7543076018123570421
       vertices: []
       indices: 
@@ -217,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c39f0d181dc9ed84ba9d326addb3b6da
+      spriteID: f23addc8f7a2d4341b6dae83b735cee6
       internalID: -4406329636228016505
       vertices: []
       indices: 
@@ -225,6 +228,27 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: person_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5037a892ce2d0c4684dd100a53be958
+      internalID: 2220058378480924167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_6
       rect:
         serializedVersion: 2
         x: 1
@@ -238,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69f70d08e0149f34c949b458905e93ac
-      internalID: 2220058378480924167
+      spriteID: 3982d69da046e5b4088c79f4a13a86a8
+      internalID: -9139368156053419506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: person_spritesheet_6
+      name: person_spritesheet_7
       rect:
         serializedVersion: 2
         x: 17
@@ -259,8 +283,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fec2cb2a4fc49314a9dd4afafb355fff
-      internalID: -9139368156053419506
+      spriteID: 537ac1232c69b2d428e48773c4e757d2
+      internalID: -2892359355727195273
       vertices: []
       indices: 
       edges: []
