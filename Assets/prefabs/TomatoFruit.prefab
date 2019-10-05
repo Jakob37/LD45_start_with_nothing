@@ -143,8 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f5f46f30d9bdb479898ede488a8132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maturation_time: 5
+  maturation_time: 20
   frames:
+  - {fileID: 7010617245534139418, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
+  - {fileID: 7010617245534139418, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
+  - {fileID: 7010617245534139418, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
+  - {fileID: 7010617245534139418, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
   - {fileID: 6128299156075563123, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
   - {fileID: 3386662938922423588, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
   - {fileID: -6110656803992641779, guid: 1b15b497d96294e5bac5dec333b73817, type: 3}
