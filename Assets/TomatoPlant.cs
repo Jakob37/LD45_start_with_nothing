@@ -133,6 +133,7 @@ public class TomatoPlant : MonoBehaviour
             return;
         }
         TomatoFruit tomato = Instantiate(tomato_prefab);
+        tomato.transform.parent = gameObject.transform;
         tomato.setPosition(position);
 
         tomatoes.Add(tomato);

@@ -14,6 +14,10 @@ public class BigTomatoGuy : MonoBehaviour
 
         if (coll.gameObject.GetComponent<TomatoPlant>() != null) {
             TomatoPlant tomato_plant = coll.gameObject.GetComponent<TomatoPlant>();
+            TomatoFruit[] tomato_fruits = tomato_plant.gameObject.GetComponentsInChildren<TomatoFruit>();
+            foreach (TomatoFruit tomato in tomato_fruits) {
+                Destroy(tomato.gameObject);
+            }
             Destroy(tomato_plant.gameObject);
             thieving_behaviour.LeaveArea();
                 // LeaveArea();
