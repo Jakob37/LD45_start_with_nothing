@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
     public Sprite dead_sprite;
     private bool alive = true;
     public float dig_time;
+    public Sprite[] shovel_frames;
 
     private float freeze_time;
 
@@ -30,6 +31,9 @@ public class Player : MonoBehaviour {
     void Start() {
         movement.IsMoving = false;
         movement.IsFlipped = false;
+        if (inventory.HasShovel) {
+            basic_animator.UpdateFrames(shovel_frames);
+        }
     }
 
     void Update () {
@@ -40,13 +44,12 @@ public class Player : MonoBehaviour {
             UpdateMovement();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && inventory.Seeds > 0) {
+        if (Input.GetKeyDown(KeyCode.Space) && inventory.Seeds > 0 && freeze_time <= 0) {
             PlantTomatoPlant();
             inventory.PlantSeed();
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel) {
-            print("Digging hole");
+        if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel && freeze_time <= 0) {
             DigHole(dig_time);
         }
 
@@ -122,15 +125,18 @@ public class Player : MonoBehaviour {
 
     private void ShopSpotCollide(ShopSpot shop_spot) {
 
-        bool was_bough = false;
+        bool was_bought = false;
         if (shop_spot.HasShopSeed()) {
-            was_bough = BuySeed(shop_spot.GetShopSeed());
+            was_bought = BuySeed(shop_spot.GetShopSeed());
         }
         else if (shop_spot.HasShopShovel()) {
-            was_bough = BuyShovel(shop_spot.GetShopShovel());
+            was_bought = BuyShovel(shop_spot.GetShopShovel());
+            if (was_bought) {
+                basic_animator.UpdateFrames(shovel_frames);
+            }
         }
 
-        if (was_bough) {
+        if (was_bought) {
             shop_spot.BuyObject();
         }
     }

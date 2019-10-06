@@ -43,4 +43,8 @@ public class BasicAnimator : MonoBehaviour
         }
         return curr_walk_frame;
     }
+
+    public void UpdateFrames(Sprite[] new_frames) {
+        frames = new_frames;
+    }
 }
