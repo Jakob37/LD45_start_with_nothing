@@ -189,6 +189,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5661694270593047874}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &265176507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265176506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8b5346f796c834fb93f41a5d58854a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  morale: 4
+  thieving_target_type: 1
 --- !u!1001 &346703977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2310,6 +2324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawn_time
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: is_active
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
