@@ -81,4 +81,8 @@ public class Inventory : MonoBehaviour
         has_shovel = true;
         tomatoes -= price;
     }
+
+    public void OnDestroy() {
+        Score.Tomatoes = tomatoes;
+    }
 }
