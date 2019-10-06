@@ -11,7 +11,7 @@ public class EventHandler : MonoBehaviour
     private float gameTime;
     
     private DisplayText textController;
-    private Theif
+
     
     void Start()
     {
