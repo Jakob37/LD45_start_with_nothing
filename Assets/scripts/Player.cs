@@ -11,6 +11,9 @@ public class Player : MonoBehaviour {
     public float move_speed = 0.01f;
     public Sprite dead_sprite;
     private bool alive = true;
+    public float dig_time;
+
+    private float freeze_time;
 
     // private SpriteRenderer sprite_renderer;
     private Rigidbody2D rigi;
@@ -29,7 +32,10 @@ public class Player : MonoBehaviour {
     }
 
     void Update () {
-        if (alive) {
+
+        freeze_time -= Time.deltaTime;
+
+        if (alive && freeze_time <= 0) {
             UpdateMovement();
         }
 
@@ -40,7 +46,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel) {
             print("Digging hole");
-            DigHole();
+            DigHole(dig_time);
         }
     }
 
@@ -49,9 +55,14 @@ public class Player : MonoBehaviour {
         plant.transform.position = gameObject.transform.position;
     }
 
-    private void DigHole() {
+    private void DigHole(float dig_time) {
         GameObject hole = Instantiate(hole_prefab);
         hole.transform.position = gameObject.transform.position;
+        Freeze(dig_time);
+    }
+
+    private void Freeze(float seconds) {
+        freeze_time = seconds;
     }
 
     private void UpdateMovement() {
@@ -99,5 +110,39 @@ public class Player : MonoBehaviour {
                 Destroy(coll.gameObject);
             }
         }
+        else if (coll.gameObject.GetComponent<ShopSpot>() != null) {
+            ShopSpotCollide(coll.gameObject.GetComponent<ShopSpot>());
+        }
+    }
+
+    private void ShopSpotCollide(ShopSpot shop_spot) {
+
+        bool was_bough = false;
+        if (shop_spot.HasShopSeed()) {
+            was_bough = BuySeed(shop_spot.GetShopSeed());
+        }
+        else if (shop_spot.HasShopShovel()) {
+            was_bough = BuyShovel(shop_spot.GetShopShovel());
+        }
+
+        if (was_bough) {
+            shop_spot.BuyObject();
+        }
+    }
+
+    private bool BuySeed(ShopSeed shop_seed) {
+        if (inventory.Tomatoes >= shop_seed.price) {
+            inventory.BuySeed(shop_seed.price);
+            return true;
+        }
+        return false;
+    }
+
+    private bool BuyShovel(ShopShovel shop_shovel) {
+        if (inventory.Tomatoes >= shop_shovel.price) {
+            inventory.BuyShovel(shop_shovel.price);
+            return true;
+        }
+        return false;
     }
 }
