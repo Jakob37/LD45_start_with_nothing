@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 
     private BasicAnimator basic_animator;
     private Movement movement;
+    private AudioController audio_controller;
 
     public float move_speed = 0.01f;
     public Sprite dead_sprite;
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour {
         inventory = GetComponent<Inventory>();
         basic_animator = GetComponent<BasicAnimator>();
         movement = GetComponent<Movement>();
+        audio_controller = FindObjectOfType<AudioController>();
     }
 
     void Start() {
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel && freeze_time <= 0) {
             DigHole(dig_time);
+            audio_controller.MakeDigSound();
         }
     }
 

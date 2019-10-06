@@ -15,6 +15,8 @@ public class BigTomatoLady : MonoBehaviour
     private float arbitrary_mid_point;
     private Vector2 edge_points;
 
+    private AudioController audio_controller;
+
     void Awake() {
         arbitrary_mid_point = 1;
         movement = GetComponent<Movement>();
@@ -23,6 +25,7 @@ public class BigTomatoLady : MonoBehaviour
             Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x - padding,
             Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)).x + padding
         );
+        audio_controller = FindObjectOfType<AudioController>();
     }
 
     void Start() {
@@ -81,6 +84,7 @@ public class BigTomatoLady : MonoBehaviour
             Hole hole = coll.gameObject.GetComponent<Hole>();
             if (!hole.IsFilled) {
                 hole.FillHole();
+                audio_controller.MakeCrashSound();
                 Destroy(gameObject);
             }
         }

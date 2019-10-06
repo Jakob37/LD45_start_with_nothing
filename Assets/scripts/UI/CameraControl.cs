@@ -30,7 +30,6 @@ public class CameraControl : MonoBehaviour
     }
 
     void Update () {
-        /* 
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             targetZoom = zoomInLevel;
             newLevelSet = true;
@@ -39,7 +38,7 @@ public class CameraControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
             targetZoom = zoomOutLevel;
             newLevelSet = true;
-        }*/
+        }
 
         //float scrollData;
         //scrollData = Input.GetAxis("Mouse ScrollWheel");
