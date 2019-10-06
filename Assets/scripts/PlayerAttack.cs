@@ -27,7 +27,7 @@ public class PlayerAttack : MonoBehaviour
     void Update() {
         print(timeBtwAttack);
         if (timeBtwAttack <= 0) {
-            if (Input.GetKey(KeyCode.E)) {
+            if (Input.GetKey(KeyCode.X)) {
                 audio_controller.MakeShout();
                 exclamation_mark.Activate();
 
