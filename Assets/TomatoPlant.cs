@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using Random = System.Random;
 
 public class TomatoPlant : MonoBehaviour
 {
@@ -16,7 +15,6 @@ public class TomatoPlant : MonoBehaviour
     private float fruit_time_offset;
 
     private List<Sprite> grow_frames;
-    private Random rnd;
 
     public float maturation_time;
     public float tomato_maturation_time;
@@ -62,8 +60,6 @@ public class TomatoPlant : MonoBehaviour
         position.y -= 0.10f;
         possible_positions.Add(position);
 
-        rnd = new Random();
-
         growth_time = 0;
         fruit_time_offset = (float)(maturation_time + 0.3);
     }
@@ -99,7 +95,7 @@ public class TomatoPlant : MonoBehaviour
         }
 
         if (temp_positions.Count() > 0) {
-            int index = rnd.Next(0, temp_positions.Count);
+            int index = UnityEngine.Random.Range(0, temp_positions.Count);
             return temp_positions.ElementAt(index);
         }
         return -1;
@@ -120,7 +116,7 @@ public class TomatoPlant : MonoBehaviour
             has_tomato = true;
             tomato_growth_time = 0;
             MakeTomato();
-            fruit_time_offset = (float)(rnd.NextDouble() + 0.5);
+            fruit_time_offset = UnityEngine.Random.Range(0.0f, 1.0f) + 0.5f;
             fruit_time = 0;
         } 
     }
