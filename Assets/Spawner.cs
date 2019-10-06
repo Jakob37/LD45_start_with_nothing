@@ -7,8 +7,17 @@ enum SpawnPattern {
     Horizontal
 }
 
+[System.Serializable]
+public class SpawnerEvent {
+    public int spawn_time;
+    public int spawn_number;
+    public float start_time;
+}
+
 public class Spawner : MonoBehaviour
 {
+    public SpawnerEvent[] spawner_events;
+
     public int spawn_time;
     public int spawn_number;
 
