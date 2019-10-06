@@ -22,13 +22,18 @@ public class EventHandler : MonoBehaviour
 {
     public MessageEvent[] messageEvents;
     public SpawnerEvent[] spawnerEvents;
+    public float timeBeforeZoom; 
+    private bool hasZoomed;
 
     private float gameTime;
     private DisplayText textController;
+    private CameraControl camControl;
 
     void Start() {
         gameTime = 0;
         textController = FindObjectOfType<DisplayText>();
+        camControl = FindObjectOfType<CameraControl>();
+        hasZoomed = false;
     }
 
     void Update() {
@@ -45,6 +50,11 @@ public class EventHandler : MonoBehaviour
             if (!s.spawner.is_active && s.startTime <= gameTime) {
                 s.spawner.SetActive();
             }
+        }
+
+        if(!hasZoomed && timeBeforeZoom <= gameTime) {
+            hasZoomed = true;
+            camControl.SetTargetZoom();
         }
     }
 }
