@@ -28,6 +28,11 @@ public class Spawner : MonoBehaviour
         is_active = true;
     }
 
+    public void SetRate(int spawn_time, int spawn_number) {
+        this.spawn_time = spawn_time;
+        this.spawn_number = spawn_number;
+    }
+
     void Update() {
         if (is_active) {
             current_time += Time.deltaTime;
@@ -41,6 +46,7 @@ public class Spawner : MonoBehaviour
     private void SpawnUnits(GameObject spawn_prefab, int nbr_units, bool horizontal_sides_only) {
 
         for (int i = 0; i < nbr_units; i++) {
+            print("Spawn!");
             InitializeUnit(spawn_prefab, horizontal_sides_only);
         }
     }

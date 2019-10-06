@@ -25,7 +25,6 @@ public class PlayerAttack : MonoBehaviour
     }
 
     void Update() {
-        print(timeBtwAttack);
         if (timeBtwAttack <= 0) {
             if (Input.GetKey(KeyCode.E)) {
                 audio_controller.MakeShout();

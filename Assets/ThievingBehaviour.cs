@@ -61,9 +61,16 @@ public class ThievingBehaviour : MonoBehaviour
 
         bool no_thief_target = false;
         if (thieving_target_type == ThievingTarget.TomatoFruit) {
-            TomatoFruit[] thieving_target = FindObjectsOfType<TomatoFruit>();
-            if (thieving_target.Length > 0) {
-                TomatoFruit target_fruit = thieving_target[Random.Range(0, thieving_target.Length - 1)];
+            TomatoFruit[] thieving_target_all = FindObjectsOfType<TomatoFruit>();
+            List<TomatoFruit> thieving_target = new List<TomatoFruit>();
+            foreach (TomatoFruit tomato in thieving_target_all) {
+                if (tomato.IsRipe()) {
+                    thieving_target.Add(tomato);
+                }
+            }
+
+            if (thieving_target.Count > 0) {
+                TomatoFruit target_fruit = thieving_target[Random.Range(0, thieving_target.Count - 1)];
                 target = target_fruit.gameObject.transform;
                 currentTarget = target.position;
             }
