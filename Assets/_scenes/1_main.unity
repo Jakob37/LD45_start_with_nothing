@@ -567,6 +567,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Your Text Here
       objectReference: {fileID: 0}
+    - target: {fileID: 593200746463925430, guid: 34a5ae6bb9f1c514ba7c75eb6015dce9,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34a5ae6bb9f1c514ba7c75eb6015dce9, type: 3}
 --- !u!1001 &530961766
@@ -1904,7 +1909,7 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[5].displayTime
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1929,12 +1934,12 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[11].displayTime
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[11].message
-      value: Get a showel and start digging! <C>
+      value: Get a showel and dig holes to trap them <C>
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1950,6 +1955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: messageEvents.Array.data[8].timeUntilMessage
       value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[8].displayTime
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49550fd2fcc09e14d9d31f5708371d6c, type: 3}
