@@ -3,6 +3,8 @@
 public class Player : MonoBehaviour {
 
     public GameObject tomato_plant_prefab;
+    public GameObject hole_prefab;
+
     private BasicAnimator basic_animator;
     private Movement movement;
 
@@ -35,11 +37,21 @@ public class Player : MonoBehaviour {
             PlantTomatoPlant();
             inventory.PlantSeed();
         }
+
+        if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel) {
+            print("Digging hole");
+            DigHole();
+        }
     }
 
     private void PlantTomatoPlant() {
         GameObject plant = Instantiate(tomato_plant_prefab);
         plant.transform.position = gameObject.transform.position;
+    }
+
+    private void DigHole() {
+        GameObject hole = Instantiate(hole_prefab);
+        hole.transform.position = gameObject.transform.position;
     }
 
     private void UpdateMovement() {
@@ -51,6 +63,7 @@ public class Player : MonoBehaviour {
 
         if (horiz_input != 0) {
             transform.position = new Vector2(transform.position.x + move_speed * horiz_input, transform.position.y);
+            transform.position = movement.LimitPositionToScreen(transform.position);
             movement.IsMoving = true;
 
             if (horiz_input < 0) {
@@ -63,6 +76,7 @@ public class Player : MonoBehaviour {
 
         if (vertical_input != 0) {
             transform.position = new Vector2(transform.position.x, transform.position.y + move_speed * vertical_input);
+            transform.position = movement.LimitPositionToScreen(transform.position);
             movement.IsMoving = true;
         }
     }

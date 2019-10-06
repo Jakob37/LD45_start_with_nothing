@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public bool start_with_shovel;
+
     private InventoryText inv_text;
+
+    private bool has_shovel;
+    public bool HasShovel {
+        get {
+            return has_shovel;
+        }
+    }
 
     private int seeds;
     public int Seeds {
@@ -27,10 +36,20 @@ public class Inventory : MonoBehaviour
     void Start() {
         seeds = 0;
         tomatoes = 0;
+
+        if (start_with_shovel) {
+            has_shovel = true;
+        }
     }
 
     void Update() {
-        inv_text.SetText("Tomatoes: " + tomatoes + "\n" + "Seeds: " + seeds);
+
+        string inventory_text = "Tomatoes: " + tomatoes + "\n" + "Seeds: " + seeds;
+        if (has_shovel) {
+            inventory_text += "\n Has shovel";
+        }
+
+        inv_text.SetText(inventory_text);
     }
 
     public void BuySeed(int price) {
@@ -48,5 +67,15 @@ public class Inventory : MonoBehaviour
 
     public void PlantSeed() {
         seeds -= 1;
+    }
+
+    public void BuyShovel(int price) {
+
+        if (price > tomatoes || has_shovel) {
+            throw new System.Exception("Invalid request, either too few tomatoes or you already have the shovel. Tomatoes: " + tomatoes + " has shovel: " + has_shovel);
+        }
+
+        has_shovel = true;
+        tomatoes -= price;
     }
 }
