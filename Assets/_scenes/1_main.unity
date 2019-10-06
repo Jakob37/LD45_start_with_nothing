@@ -710,12 +710,12 @@ PrefabInstance:
     - target: {fileID: 7249001416898960125, guid: d5a25510155edc344978693270306194,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4317145
+      value: 2.269
       objectReference: {fileID: 0}
     - target: {fileID: 7249001416898960125, guid: d5a25510155edc344978693270306194,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1499455
+      value: -3.218
       objectReference: {fileID: 0}
     - target: {fileID: 7249001416898960125, guid: d5a25510155edc344978693270306194,
         type: 3}
@@ -761,6 +761,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284845882695450572, guid: d5a25510155edc344978693270306194,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.176
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284845882695450572, guid: d5a25510155edc344978693270306194,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249001417600905916, guid: d5a25510155edc344978693270306194,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.338
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249001417600905916, guid: d5a25510155edc344978693270306194,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.056
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a25510155edc344978693270306194, type: 3}
@@ -996,6 +1016,111 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawners
       objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawner_events.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: is_active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].startTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_rate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[2].startTime
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[2].spawn_count
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[2].spawn_rate
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: debug_name
+      value: Thief
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_time
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: is_active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[0].startTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[0].spawn_count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[0].spawn_rate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].startTime
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_rate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: debug_name
+      value: Guy
+      objectReference: {fileID: 0}
     - target: {fileID: 1727030615809944624, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: m_Name
@@ -1068,43 +1193,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
+      propertyPath: spawn_times.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
       propertyPath: spawn_time
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: is_active
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: spawn_sides_only
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
-      propertyPath: spawn_time
-      value: 8
+      propertyPath: debug_name
+      value: Gal
       objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
-      propertyPath: is_active
+      propertyPath: spawn_times.Array.data[0].startTime
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
-      propertyPath: spawner_events.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_time
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: is_active
+      propertyPath: spawn_times.Array.data[0].spawn_count
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[0].spawn_rate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].startTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_rate
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9981a9a5fcdaaf41af83e8e929ab46e, type: 3}
@@ -1330,7 +1470,7 @@ PrefabInstance:
     - target: {fileID: 7705319419688048099, guid: 8af778e5fa456b440a45a136297e93c0,
         type: 3}
       propertyPath: zoomOutLevel
-      value: 1.1
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af778e5fa456b440a45a136297e93c0, type: 3}
@@ -1514,17 +1654,22 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: spawnerEventsThief.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: spawnerEventsTomatoGuy.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: spawnerEventsTomatoLady.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.size
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1554,7 +1699,7 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[2].message
-      value: Buy more seeds in the shop
+      value: Buy more seeds in the shop (plant with <Z>)
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1574,12 +1719,12 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[8].message
-      value: What is that noise?
+      value: Scare them away with <X>
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[9].message
-      value: Get a showel and start digging! <Enter>
+      value: What is that noise?
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1629,12 +1774,182 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: spawnerEventsThief.Array.data[0].spawn_count
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: spawnerEventsThief.Array.data[0].spawn_rate
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsThief.Array.data[0].startTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoGuy.Array.data[0].startTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoGuy.Array.data[0].spawn_count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoGuy.Array.data[0].spawn_rate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoLady.Array.data[0].startTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoLady.Array.data[0].spawn_count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoLady.Array.data[0].spawn_rate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoGuy.Array.data[1].startTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoGuy.Array.data[1].spawn_count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoGuy.Array.data[1].spawn_rate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoLady.Array.data[1].startTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoLady.Array.data[1].spawn_count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: spawnerEventsTomatoLady.Array.data[1].spawn_rate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[1].message
+      value: Pick up seeds and plant them with <Z>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[5].message
+      value: Scare them away with <X>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[10].timeUntilMessage
+      value: 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[10].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[10].message
+      value: 'Big Tomato is bringing the heavy artillery! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[1].timeUntilMessage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[0].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[1].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[2].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[4].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[5].timeUntilMessage
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[5].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[6].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[7].timeUntilMessage
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[7].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[11].timeUntilMessage
+      value: 107
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[11].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[11].message
+      value: Get a showel and start digging! <C>
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[9].displayTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[9].timeUntilMessage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[8].timeUntilMessage
+      value: 77
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49550fd2fcc09e14d9d31f5708371d6c, type: 3}

@@ -14,6 +14,7 @@ public class AudioController : MonoBehaviour
     void Start() {
         birds.Play();
         birds.loop = true;
+        print("Running");
     }
 
     void Update() {
