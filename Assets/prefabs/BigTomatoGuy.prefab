@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2028160741552753199}
   - component: {fileID: 2848682018713558983}
   - component: {fileID: 3111804553852471393}
+  - component: {fileID: 5013986493574084548}
   m_Layer: 10
   m_Name: BigTomatoGuy
   m_TagString: Untagged
@@ -152,3 +153,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6567cab0769b4479524f29f333ca79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5013986493574084548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4726801252309253660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8b5346f796c834fb93f41a5d58854a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  morale: 4
+  thieving_target_type: 1
