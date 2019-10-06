@@ -202,7 +202,7 @@ MonoBehaviour:
   frames:
   - {fileID: 6438862032139102022, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
   - {fileID: 8337063234793068588, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
-  walk_anim_time: 0.5
+  walk_anim_time: 0.2
 --- !u!114 &7138196029286446638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 1024
-  attackRange: 0.2
+  attackRange: 0.3
   damage: 1
 --- !u!1 &6273293023804430462
 GameObject:
