@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class DisplayText : MonoBehaviour
 {
     public bool showText;
@@ -34,7 +35,6 @@ public class DisplayText : MonoBehaviour
         }
 
         if (showText && displayTime <= 0) {
-            print("Hide text");
             showText = false;
             message.gameObject.SetActive(showText);
         }
