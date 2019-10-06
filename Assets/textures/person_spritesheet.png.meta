@@ -26,6 +26,36 @@ TextureImporter:
   - first:
       213: -2892359355727195273
     second: person_spritesheet_7
+  - first:
+      213: 2323151773073305264
+    second: person_spritesheet_8
+  - first:
+      213: -1942689191446708683
+    second: person_spritesheet_9
+  - first:
+      213: -6617105786894843112
+    second: person_spritesheet_10
+  - first:
+      213: 3724411670711935238
+    second: person_spritesheet_11
+  - first:
+      213: -1822382117381018477
+    second: person_spritesheet_12
+  - first:
+      213: -7598212310153826948
+    second: person_spritesheet_13
+  - first:
+      213: 3087596578718336117
+    second: person_spritesheet_14
+  - first:
+      213: -3785571155664585683
+    second: person_spritesheet_15
+  - first:
+      213: -626536397414064494
+    second: person_spritesheet_16
+  - first:
+      213: -4113876341050869419
+    second: person_spritesheet_17
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -84,7 +114,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
@@ -96,7 +126,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
@@ -108,7 +138,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
@@ -125,8 +155,8 @@ TextureImporter:
       name: person_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 48
+        x: 4
+        y: 112
         width: 10
         height: 15
       alignment: 0
@@ -136,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddd4932bf07ca484797b05e8f32e538f
+      spriteID: 30a2a91b684668d42ac6a8a7cf73e110
       internalID: 6438862032139102022
       vertices: []
       indices: 
@@ -146,8 +176,8 @@ TextureImporter:
       name: person_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 48
+        x: 20
+        y: 112
         width: 10
         height: 16
       alignment: 0
@@ -157,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d2590c6f0ac1224eb83dd5dd3151456
+      spriteID: 538eef81e56791844b4932d84707c4da
       internalID: 8337063234793068588
       vertices: []
       indices: 
@@ -167,10 +197,10 @@ TextureImporter:
       name: person_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 48
-        width: 10
-        height: 16
+        x: 32
+        y: 112
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,7 +208,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9a0076b84890b045a11f148b5aa5083
+      spriteID: d833402c0c6406c479ac8d6c61a60120
       internalID: -2320061051777747270
       vertices: []
       indices: 
@@ -188,10 +218,10 @@ TextureImporter:
       name: person_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 4
-        y: 32
-        width: 7
-        height: 13
+        x: 48
+        y: 112
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,7 +229,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e61c36793b3192a40858ca60b3825066
+      spriteID: 7e0f45731330d8c4a8d94090e256aba3
       internalID: -7543076018123570421
       vertices: []
       indices: 
@@ -209,10 +239,10 @@ TextureImporter:
       name: person_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 20
-        y: 32
-        width: 7
-        height: 12
+        x: 68
+        y: 112
+        width: 8
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,7 +250,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f23addc8f7a2d4341b6dae83b735cee6
+      spriteID: d7447e23da40eea428e13ad8d5095f24
       internalID: -4406329636228016505
       vertices: []
       indices: 
@@ -230,10 +260,10 @@ TextureImporter:
       name: person_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 32
-        height: 32
+        x: 84
+        y: 112
+        width: 8
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,7 +271,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5037a892ce2d0c4684dd100a53be958
+      spriteID: e272a9c659df5164d9884e5e241370f0
       internalID: 2220058378480924167
       vertices: []
       indices: 
@@ -251,9 +281,9 @@ TextureImporter:
       name: person_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 16
-        width: 11
+        x: 100
+        y: 113
+        width: 8
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -262,7 +292,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3982d69da046e5b4088c79f4a13a86a8
+      spriteID: 80dec681b30c9924c9d68125af42471d
       internalID: -9139368156053419506
       vertices: []
       indices: 
@@ -272,8 +302,155 @@ TextureImporter:
       name: person_spritesheet_7
       rect:
         serializedVersion: 2
+        x: 4
+        y: 96
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd42b55031c745142b0eea3a99cc703f
+      internalID: -2892359355727195273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 96
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1274360c8803d3247a695d0713c1a84b
+      internalID: 2323151773073305264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 97
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bc81cda6ffae84da87b714658d76c1
+      internalID: -1942689191446708683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 97
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb9a97809c706247802deec6e724b16
+      internalID: -6617105786894843112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b8ab0ec43b11849a33b318442c0f05
+      internalID: 3724411670711935238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4cb8e4b62b79c4b8df6af858e0719d
+      internalID: -1822382117381018477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 80
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869bbc724f6fa6d48b8b1be78254a198
+      internalID: -7598212310153826948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_14
+      rect:
+        serializedVersion: 2
         x: 17
-        y: 16
+        y: 80
         width: 11
         height: 12
       alignment: 0
@@ -283,8 +460,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 537ac1232c69b2d428e48773c4e757d2
-      internalID: -2892359355727195273
+      spriteID: 87349739a83083147a2540518fc5c018
+      internalID: 3087596578718336117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e43d8574f23df4b88b79fd7b793ebe
+      internalID: -3785571155664585683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b7e8589c2b8e1489ae907336277086
+      internalID: -626536397414064494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8943c68813994e249b0cb2bbcbebeede
+      internalID: -4113876341050869419
       vertices: []
       indices: 
       edges: []
