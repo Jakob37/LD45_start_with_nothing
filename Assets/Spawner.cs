@@ -74,7 +74,6 @@ public class Spawner : MonoBehaviour
         }
 
         side = choices[Random.Range(0, choices.Count)];
-        print("Side selected: " + side);
 
         float xpos = 0;
         float ypos = 0;

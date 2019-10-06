@@ -35,6 +35,10 @@ public class Player : MonoBehaviour {
             PlantTomatoPlant();
             inventory.PlantSeed();
         }
+
+        if (Input.GetKeyDown(KeyCode.D) && inventory.HasShovel) {
+
+        }
     }
 
     private void PlantTomatoPlant() {

@@ -6,6 +6,13 @@ public class Inventory : MonoBehaviour
 {
     private InventoryText inv_text;
 
+    private bool has_shovel;
+    public bool HasShovel {
+        get {
+            return has_shovel;
+        }
+    }
+
     private int seeds;
     public int Seeds {
         get {
@@ -48,5 +55,15 @@ public class Inventory : MonoBehaviour
 
     public void PlantSeed() {
         seeds -= 1;
+    }
+
+    public void BuyShovel(int price) {
+
+        if (price > tomatoes || has_shovel) {
+            throw new System.Exception("Invalid request, either too few tomatoes or you already have the shovel. Tomatoes: " + tomatoes + " has shovel: " + has_shovel);
+        }
+
+        has_shovel = true;
+        tomatoes -= price;
     }
 }
