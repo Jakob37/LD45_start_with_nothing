@@ -52,43 +52,43 @@ MonoBehaviour:
     displayTime: 3
     shown: 0
     message: Pick up seeds and plant them with <Space>
-  - timeUntilMessage: 33
+  - timeUntilMessage: 26
     displayTime: 3
     shown: 0
     message: Buy more seeds in the Big Tomato Inc shop
-  - timeUntilMessage: 36
+  - timeUntilMessage: 29
     displayTime: 3
     shown: 0
     message: 1 seed only 10 tomatoes
-  - timeUntilMessage: 90
+  - timeUntilMessage: 30
     displayTime: 3
     shown: 0
     message: Thieves are comming to steal your tomatoes!
-  - timeUntilMessage: 93
+  - timeUntilMessage: 33
     displayTime: 3
     shown: 0
     message: Scare them away with <E>
-  - timeUntilMessage: 180
+  - timeUntilMessage: 70
     displayTime: 3
     shown: 0
     message: Oh no! Big tomato is on to you!
-  - timeUntilMessage: 183
+  - timeUntilMessage: 73
     displayTime: 3
     shown: 0
     message: They are comming to take your plants away
-  - timeUntilMessage: 460
+  - timeUntilMessage: 100
     displayTime: 3
     shown: 0
     message: Oh Shit! They brought traktors!!!
-  - timeUntilMessage: 463
+  - timeUntilMessage: 103
     displayTime: 3
     shown: 0
-    message: Get a showel and start digging
+    message: Get a showel and start digging <Enter>
   spawnerEvents:
-  - startTime: 90
+  - startTime: 30
     spawner: {fileID: 0}
-  - startTime: 182
+  - startTime: 60
     spawner: {fileID: 0}
-  - startTime: 462
+  - startTime: 100
     spawner: {fileID: 0}
-  timeBeforeZoom: 30
+  timeBeforeZoom: 25
