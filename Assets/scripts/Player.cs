@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -47,6 +48,10 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel) {
             print("Digging hole");
             DigHole(dig_time);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("2_end", LoadSceneMode.Single);
         }
     }
 
