@@ -46,12 +46,12 @@ public class Player : MonoBehaviour {
             UpdateMovement();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && inventory.Seeds > 0 && freeze_time <= 0) {
+        if (Input.GetKeyDown(KeyCode.Z) && inventory.Seeds > 0 && freeze_time <= 0) {
             PlantTomatoPlant();
             inventory.PlantSeed();
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel && freeze_time <= 0) {
+        if (Input.GetKeyDown(KeyCode.C) && inventory.HasShovel && freeze_time <= 0) {
             DigHole(dig_time);
             audio_controller.MakeDigSound();
         }
