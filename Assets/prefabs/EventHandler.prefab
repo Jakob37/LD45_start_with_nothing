@@ -44,19 +44,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageEvents:
-  - timeUntilMessage: 3
+  - timeUntilMessage: 1
     displayTime: 2
     shown: 0
-    message: Hej din Apa
-  - timeUntilMessage: 7
+    message: Time to start your own Tomato Empire
+  - timeUntilMessage: 3
     displayTime: 3
     shown: 0
-    message: "Du \xE4r en fisk"
+    message: Pick up seeds and plant them with <Space>
+  - timeUntilMessage: 16
+    displayTime: 3
+    shown: 0
+    message: Buy more seeds in Big Tomato Inc Shop
+  - timeUntilMessage: 19
+    displayTime: 3
+    shown: 0
+    message: 1 seed only 10 tomatoes
+  - timeUntilMessage: 60
+    displayTime: 3
+    shown: 0
+    message: Thieves are comming to steal your tomatoes!
+  - timeUntilMessage: 63
+    displayTime: 3
+    shown: 0
+    message: Scare them away with <E>
+  - timeUntilMessage: 90
+    displayTime: 3
+    shown: 0
+    message: Oh Shit! They brought traktors!!!
+  - timeUntilMessage: 120
+    displayTime: 3
+    shown: 0
+    message: Oh no! Big tomato is on to you!
+  - timeUntilMessage: 360
+    displayTime: 3
+    shown: 0
+    message: Oh Shit! They brought traktors!!!
   spawnerEvents:
-  - startTime: 3
+  - startTime: 30
     spawner: {fileID: 0}
-  - startTime: 10
+  - startTime: 60
     spawner: {fileID: 0}
-  - startTime: 15
+  - startTime: 90
     spawner: {fileID: 0}
-  timeUntilThiefSpawnStart: 0
+  timeBeforeZoom: 15
