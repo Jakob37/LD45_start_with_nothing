@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     public GameObject spawn_prefab;
 
     private float current_time;
+    public bool is_active;
 
     private SpawnPattern spawn_pattern;
     public bool spawn_sides_only;
@@ -25,7 +26,7 @@ public class Spawner : MonoBehaviour
 
     void Update() {
         current_time += Time.deltaTime;
-        if (current_time > spawn_time) {
+        if (current_time > spawn_time && is_active) {
             SpawnUnits(spawn_prefab, spawn_number, spawn_sides_only);
             current_time -= spawn_time;
         }
