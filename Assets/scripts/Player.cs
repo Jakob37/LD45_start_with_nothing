@@ -55,6 +55,7 @@ public class Player : MonoBehaviour {
 
         if (horiz_input != 0) {
             transform.position = new Vector2(transform.position.x + move_speed * horiz_input, transform.position.y);
+            transform.position = movement.LimitPositionToScreen(transform.position);
             movement.IsMoving = true;
 
             if (horiz_input < 0) {
@@ -67,6 +68,7 @@ public class Player : MonoBehaviour {
 
         if (vertical_input != 0) {
             transform.position = new Vector2(transform.position.x, transform.position.y + move_speed * vertical_input);
+            transform.position = movement.LimitPositionToScreen(transform.position);
             movement.IsMoving = true;
         }
     }

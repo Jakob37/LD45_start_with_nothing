@@ -25,4 +25,24 @@ public class Movement : MonoBehaviour
             is_flipped = value;
         }
     }
+
+    public Vector2 LimitPositionToScreen(Vector2 start_pos) {
+        var edges = GetCurrentEdgePositions();
+        print(edges);
+        print("Start pos: " + start_pos.y + " edges.z " + edges.z + " edges.x " + edges.x);
+        print(edges.z);
+        print(edges.x);
+
+        float y_padding = 0.1f;
+
+        float clamp_x = Mathf.Clamp(start_pos.x, edges.w, edges.y);
+        float clamp_y = Mathf.Clamp(start_pos.y, edges.z, edges.x);
+        return new Vector2(clamp_x, clamp_y);
+    }
+
+    public Vector4 GetCurrentEdgePositions() {
+        Vector2 left_positions = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+        Vector2 right_positions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        return new Vector4(right_positions.y, right_positions.x, left_positions.y, left_positions.x);
+    }
 }
