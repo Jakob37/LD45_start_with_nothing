@@ -12,11 +12,16 @@ public class MessageEvent {
     public string message;
 }
 
+[System.Serializable]
+public class SpawnerEvent {
+    public float startTime;
+    public Spawner spawner;
+}
+
 public class EventHandler : MonoBehaviour
 {
     public MessageEvent[] messageEvents;
-
-    public float timeUntilThiefSpawnStart;
+    public SpawnerEvent[] spawnerEvents;
 
     private float gameTime;
     private DisplayText textController;
@@ -33,6 +38,12 @@ public class EventHandler : MonoBehaviour
             if (!m.shown && m.timeUntilMessage <= gameTime) {
                 m.shown = true;
                 textController.ShowText(m.message, m.displayTime);
+            }
+        }
+
+        foreach (SpawnerEvent s in spawnerEvents) {
+            if (!s.spawner.is_active && s.startTime <= gameTime) {
+                s.spawner.SetActive();
             }
         }
     }
