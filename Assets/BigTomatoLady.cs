@@ -77,5 +77,12 @@ public class BigTomatoLady : MonoBehaviour
             // LeaveArea();
             // is_done = true;
         }
+        else if (coll.gameObject.GetComponent<Hole>() != null) {
+            Hole hole = coll.gameObject.GetComponent<Hole>();
+            if (!hole.IsFilled) {
+                hole.FillHole();
+                Destroy(gameObject);
+            }
+        }
     }
 }

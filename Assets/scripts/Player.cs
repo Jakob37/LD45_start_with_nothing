@@ -3,6 +3,8 @@
 public class Player : MonoBehaviour {
 
     public GameObject tomato_plant_prefab;
+    public GameObject hole_prefab;
+
     private BasicAnimator basic_animator;
     private Movement movement;
 
@@ -36,14 +38,20 @@ public class Player : MonoBehaviour {
             inventory.PlantSeed();
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && inventory.HasShovel) {
-
+        if (Input.GetKeyDown(KeyCode.Return) && inventory.HasShovel) {
+            print("Digging hole");
+            DigHole();
         }
     }
 
     private void PlantTomatoPlant() {
         GameObject plant = Instantiate(tomato_plant_prefab);
         plant.transform.position = gameObject.transform.position;
+    }
+
+    private void DigHole() {
+        GameObject hole = Instantiate(hole_prefab);
+        hole.transform.position = gameObject.transform.position;
     }
 
     private void UpdateMovement() {

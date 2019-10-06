@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public bool start_with_shovel;
+
     private InventoryText inv_text;
 
     private bool has_shovel;
@@ -34,10 +36,20 @@ public class Inventory : MonoBehaviour
     void Start() {
         seeds = 0;
         tomatoes = 0;
+
+        if (start_with_shovel) {
+            has_shovel = true;
+        }
     }
 
     void Update() {
-        inv_text.SetText("Tomatoes: " + tomatoes + "\n" + "Seeds: " + seeds);
+
+        string inventory_text = "Tomatoes: " + tomatoes + "\n" + "Seeds: " + seeds;
+        if (has_shovel) {
+            inventory_text += "\n Has shovel";
+        }
+
+        inv_text.SetText(inventory_text);
     }
 
     public void BuySeed(int price) {

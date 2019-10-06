@@ -28,13 +28,6 @@ public class Movement : MonoBehaviour
 
     public Vector2 LimitPositionToScreen(Vector2 start_pos) {
         var edges = GetCurrentEdgePositions();
-        print(edges);
-        print("Start pos: " + start_pos.y + " edges.z " + edges.z + " edges.x " + edges.x);
-        print(edges.z);
-        print(edges.x);
-
-        float y_padding = 0.1f;
-
         float clamp_x = Mathf.Clamp(start_pos.x, edges.w, edges.y);
         float clamp_y = Mathf.Clamp(start_pos.y, edges.z, edges.x);
         return new Vector2(clamp_x, clamp_y);

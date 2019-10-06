@@ -103,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tomato_plant_prefab: {fileID: 1890638100109868, guid: 5238e28d05d41b844bf1f6ebd6fe3690,
     type: 3}
+  hole_prefab: {fileID: 9112820804082952331, guid: ecf313db6a8d6de438d68be6df2758c1,
+    type: 3}
   move_speed: 0.01
   dead_sprite: {fileID: 0}
 --- !u!50 &50498154828484592
