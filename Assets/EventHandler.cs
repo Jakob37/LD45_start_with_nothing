@@ -3,29 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+[System.Serializable]
+public class MessageEvent {
+    public float timeUntilMessage;
+    public float displayTime;
+    public bool shown = false;
+    public string message;
+}
+
 public class EventHandler : MonoBehaviour
 {
-    public float timeUntilFirstMessage;
+    public MessageEvent[] messageEvents;
+
     public float timeUntilThiefSpawnStart;
 
     private float gameTime;
-    
     private DisplayText textController;
 
-    
-    void Start()
-    {
+    void Start() {
         gameTime = 0;
         textController = FindObjectOfType<DisplayText>();
     }
 
-    void Update()
-    {
+    void Update() {
         gameTime += Time.deltaTime;
 
-        if (timeUntilFirstMessage <= gameTime) {
-            print("Display Message");
-            textController.ShowText("Hej din apa");
+        foreach (MessageEvent m in messageEvents) {
+            if (!m.shown && m.timeUntilMessage <= gameTime) {
+                m.shown = true;
+                textController.ShowText(m.message, m.displayTime);
+            }
         }
     }
 }

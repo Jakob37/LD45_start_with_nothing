@@ -3,22 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class DisplayText : MonoBehaviour
 {
-    public bool display_text;
+    public bool showText;
+    private float displayTime;
 
     private Panel panel;
-    private DisplayText displayText;
+    private DisplayText textDisplayer;
     private Text text;
+    private Message message;
 
     void Start () {
-        displayText = GetComponentInChildren<DisplayText>();
-        text = GetComponentInChildren<Text>();
+        message = GetComponentInChildren<Message>();
+        text = message.GetComponentInChildren<Text>();
         text.text = "text";
-
+        showText = false;
+        message.gameObject.SetActive(showText);
     }
 
-    public void ShowText(string message) {
+    public void ShowText(string message, float displayTime) {
         text.text = message;
+        showText = true;
+        this.displayTime = displayTime;
+        this.message.gameObject.SetActive(showText);
     }
+
+    public void Update() {
+        if (showText) {
+            displayTime -= Time.deltaTime;
+        }
+
+        if (showText && displayTime <= 0) {
+            showText = false;
+            message.gameObject.SetActive(showText);
+        }
+    }
+
 }
