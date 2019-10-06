@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
     void Update() {
         if (timeBtwAttack <= 0) {
             if(Input.GetKey(KeyCode.E)) {
+              print("punch");
               Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 
               for (int i = 0; i < enemiesToDamage.Length; i++) {
