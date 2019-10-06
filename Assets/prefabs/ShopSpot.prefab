@@ -51,7 +51,7 @@ MonoBehaviour:
   shop_shovel_prefab: {fileID: 3232473822959858090, guid: dc609ffb5d99caa4ea85f3eb431ceb5b,
     type: 3}
   shop_spot_type: 0
-  shop_object: {fileID: 0}
+  seed_respawn_time: 10
 --- !u!212 &5264634900937446333
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -953886835
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 56562c4c257c5e44c926c93409f38657, type: 3}
   m_Color: {r: 0.8773585, g: 0.8663607, b: 0.376602, a: 1}

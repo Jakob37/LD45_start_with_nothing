@@ -107,7 +107,7 @@ MonoBehaviour:
     type: 3}
   move_speed: 0.01
   dead_sprite: {fileID: 0}
-  dig_time: 0
+  dig_time: 2
   shovel_frames:
   - {fileID: -2320061051777747270, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
   - {fileID: -7543076018123570421, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}

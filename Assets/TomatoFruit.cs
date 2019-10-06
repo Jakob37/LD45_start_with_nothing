@@ -50,7 +50,6 @@ public class TomatoFruit : MonoBehaviour
             UpdateMaturationStage();
         }
         else if (!assigned_mature) {
-            print("Is mature!");
             assigned_mature = true;
             this.GetComponent<SpriteRenderer>().sprite = mature_frame;
         }

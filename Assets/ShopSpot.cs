@@ -21,6 +21,9 @@ public class ShopSpot : MonoBehaviour
         }
     }
 
+    public float seed_respawn_time;
+    private float curr_respawn_time;
+
     private SpriteRenderer sprite_renderer;
 
     void Awake() {
@@ -63,10 +66,28 @@ public class ShopSpot : MonoBehaviour
 
     public void BuyObject() {
         shop_object = null;
+
+        if (shop_spot_type == SpotType.Seed) {
+            curr_respawn_time = seed_respawn_time;
+        }
     }
 
     void Update() {
         UpdateDisplay();
+
+        if (shop_spot_type == SpotType.Seed) {
+            UpdateSeedRespawn();
+        }
+    }
+
+    private void UpdateSeedRespawn() {
+        if (curr_respawn_time > 0) {
+            curr_respawn_time -= Time.deltaTime;
+            if (curr_respawn_time <= 0) {
+                shop_object = Instantiate(shop_seed_prefab);
+                shop_object.transform.position = gameObject.transform.position;
+            }
+        }
     }
 
     private void UpdateDisplay() {
