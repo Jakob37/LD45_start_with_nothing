@@ -11,7 +11,10 @@ public class TomatoFruit : MonoBehaviour
     private Transform transform;
     private int plant_position;
 
+    private bool assigned_mature;
+
     public Sprite[] frames;
+    public Sprite mature_frame;
     
 
     private float final_height_scale;
@@ -38,13 +41,18 @@ public class TomatoFruit : MonoBehaviour
 
     void Start() {
         curr_growth_time = 0;
-
+        assigned_mature = false;
     }
 
     void Update() {
         curr_growth_time += Time.deltaTime;
         if (curr_growth_time < maturation_time) {
             UpdateMaturationStage();
+        }
+        else if (!assigned_mature) {
+            print("Is mature!");
+            assigned_mature = true;
+            this.GetComponent<SpriteRenderer>().sprite = mature_frame;
         }
     }
 
