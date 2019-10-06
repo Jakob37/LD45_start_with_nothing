@@ -55,10 +55,6 @@ public class Player : MonoBehaviour {
             DigHole(dig_time);
             audio_controller.MakeDigSound();
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            SceneManager.LoadScene("2_end", LoadSceneMode.Single);
-        }
     }
 
     private void PlantTomatoPlant() {
