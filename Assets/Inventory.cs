@@ -5,6 +5,9 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public bool start_with_shovel;
+    public int start_tomatoes;
+    public int start_seeds;
+
 
     private InventoryText inv_text;
 
@@ -34,8 +37,8 @@ public class Inventory : MonoBehaviour
     }
 
     void Start() {
-        seeds = 0;
-        tomatoes = 0;
+        seeds = start_seeds;
+        tomatoes = start_tomatoes;
 
         if (start_with_shovel) {
             has_shovel = true;
