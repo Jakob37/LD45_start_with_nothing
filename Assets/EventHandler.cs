@@ -55,9 +55,9 @@ public class EventHandler : MonoBehaviour
     void Update() {
         gameTime += Time.deltaTime;
 
-        UpdateSpawnerList(gameTime, thief_spawner, spawnerEventsThief);
-        UpdateSpawnerList(gameTime, tomato_guy_spawner, spawnerEventsTomatoGuy);
-        UpdateSpawnerList(gameTime, tomato_lady_spawner, spawnerEventsTomatoLady);
+        // UpdateSpawnerList(gameTime, thief_spawner, spawnerEventsThief);
+        // UpdateSpawnerList(gameTime, tomato_guy_spawner, spawnerEventsTomatoGuy);
+        // UpdateSpawnerList(gameTime, tomato_lady_spawner, spawnerEventsTomatoLady);
 
         foreach (MessageEvent m in messageEvents) {
             if (!m.shown && m.timeUntilMessage <= gameTime) {
@@ -66,13 +66,7 @@ public class EventHandler : MonoBehaviour
             }
         }
 
-        // foreach (SpawnerEvent s in spawnerEvents) {
-        //     if (!s.spawner.is_active && s.startTime <= gameTime) {
-        //         s.spawner.SetActive();
-        //     }
-        // }
-
-        if(!hasZoomed && timeBeforeZoom <= gameTime) {
+        if (!hasZoomed && timeBeforeZoom <= gameTime) {
             hasZoomed = true;
             camControl.SetTargetZoom();
         }
@@ -82,7 +76,14 @@ public class EventHandler : MonoBehaviour
 
     private void UpdateSpawnerList(float gameTime, Spawner spawner, SpawnerTimeRate[] spawner_list) {
 
-        SpawnerTimeRate latest_event = spawner_list[0];
+        SpawnerTimeRate latest_event;
+        if (spawner_list[0].startTime > gameTime) {
+            latest_event = spawner_list[0];
+        }
+        else {
+            return;
+        }
+
         for (var i = 1; i < spawner_list.Length; i++) {
             var spawn_event = spawner_list[i];
             if (spawn_event.startTime > latest_event.startTime) {
@@ -93,6 +94,7 @@ public class EventHandler : MonoBehaviour
             }
         }
 
+        print(latest_event.startTime);
         spawner.SetActive();
         spawner.SetRate(latest_event.spawn_rate, latest_event.spawn_count);
     }
