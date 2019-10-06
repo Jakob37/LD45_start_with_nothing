@@ -56,5 +56,14 @@ public class EventHandler : MonoBehaviour
             hasZoomed = true;
             camControl.SetTargetZoom();
         }
+
+        CheckEndCondition();
+    }
+
+    private void CheckEndCondition() {
+        TomatoPlant[] plants = FindObjectsOfType<TomatoPlant>();
+        if ((plants == null || plants.Length == 0) && gameTime >= 60) {
+            SceneManager.LoadScene("2_end", LoadSceneMode.Single);
+        }
     }
 }
