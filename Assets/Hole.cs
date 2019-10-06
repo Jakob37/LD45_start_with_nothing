@@ -21,6 +21,5 @@ public class Hole : MonoBehaviour
     public void FillHole() {
         is_filled = true;
         sprite_renderer.sprite = fill_sprite;
-        sprite_renderer.color = new Color(1, 0, 0);
     }
 }

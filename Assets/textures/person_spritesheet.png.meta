@@ -56,6 +56,12 @@ TextureImporter:
   - first:
       213: -4113876341050869419
     second: person_spritesheet_17
+  - first:
+      213: 7357815016121762434
+    second: person_spritesheet_18
+  - first:
+      213: 1512886966181544828
+    second: person_spritesheet_19
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -525,6 +531,48 @@ TextureImporter:
       bones: []
       spriteID: 8943c68813994e249b0cb2bbcbebeede
       internalID: -4113876341050869419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 32
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b94afbe156c4aa4eab687008b3660d5
+      internalID: 7357815016121762434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 32
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f55138bf9dc8124bab5e445e8c6f33e
+      internalID: 1512886966181544828
       vertices: []
       indices: 
       edges: []
