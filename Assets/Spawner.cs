@@ -9,8 +9,10 @@ enum SpawnPattern {
 
 public class Spawner : MonoBehaviour
 {
-    public int spawn_time;
-    public int spawn_number;
+    public int spawn_delay_seconds;
+    public int spawn_count;
+
+    public string debug_name;
 
     public GameObject spawn_prefab;
     public SpawnerTimeRate[] spawn_times;
@@ -35,8 +37,8 @@ public class Spawner : MonoBehaviour
     }
 
     public void SetRate(int spawn_time, int spawn_number) {
-        this.spawn_time = spawn_time;
-        this.spawn_number = spawn_number;
+        this.spawn_delay_seconds = spawn_time;
+        this.spawn_count = spawn_number;
     }
 
     void Update() {
@@ -45,9 +47,9 @@ public class Spawner : MonoBehaviour
             current_time += Time.deltaTime;
             UpdateSpawnRate(elapsed_time, spawn_times);
         }
-        if (current_time > spawn_time && is_active) {
-            SpawnUnits(spawn_prefab, spawn_number, spawn_sides_only);
-            current_time -= spawn_time;
+        if (spawn_count > 0 && current_time > spawn_delay_seconds && is_active) {
+            SpawnUnits(spawn_prefab, spawn_count, spawn_sides_only);
+            current_time = 0;
         }
     }
 
@@ -64,12 +66,12 @@ public class Spawner : MonoBehaviour
 
         if (new_event) {
             SetRate(current_spawn_time_rate.spawn_rate, current_spawn_time_rate.spawn_count);
-            print("New rate assigned: " + current_spawn_time_rate.spawn_rate + " " + current_spawn_time_rate.spawn_count);
+            print(debug_name + " new rate assigned: " + current_spawn_time_rate.spawn_rate + " " + current_spawn_time_rate.spawn_count);
         }
     }
 
     private void SpawnUnits(GameObject spawn_prefab, int nbr_units, bool horizontal_sides_only) {
-
+        print("Spawning unit");
         for (int i = 0; i < nbr_units; i++) {
             InitializeUnit(spawn_prefab, horizontal_sides_only);
         }

@@ -30,13 +30,13 @@ public class EventHandler : MonoBehaviour
     public MessageEvent[] messageEvents;
     // public SpawnerEvent[] spawnerEvents;
 
-    public Spawner thief_spawner;
-    public Spawner tomato_guy_spawner;
-    public Spawner tomato_lady_spawner;
-
-    public SpawnerTimeRate[] spawnerEventsThief;
-    public SpawnerTimeRate[] spawnerEventsTomatoGuy;
-    public SpawnerTimeRate[] spawnerEventsTomatoLady;
+    // public Spawner thief_spawner;
+    // public Spawner tomato_guy_spawner;
+    // public Spawner tomato_lady_spawner;
+    // 
+    // public SpawnerTimeRate[] spawnerEventsThief;
+    // public SpawnerTimeRate[] spawnerEventsTomatoGuy;
+    // public SpawnerTimeRate[] spawnerEventsTomatoLady;
 
     public float timeBeforeZoom; 
     private bool hasZoomed;
@@ -54,10 +54,6 @@ public class EventHandler : MonoBehaviour
 
     void Update() {
         gameTime += Time.deltaTime;
-
-        // UpdateSpawnerList(gameTime, thief_spawner, spawnerEventsThief);
-        // UpdateSpawnerList(gameTime, tomato_guy_spawner, spawnerEventsTomatoGuy);
-        // UpdateSpawnerList(gameTime, tomato_lady_spawner, spawnerEventsTomatoLady);
 
         foreach (MessageEvent m in messageEvents) {
             if (!m.shown && m.timeUntilMessage <= gameTime) {
