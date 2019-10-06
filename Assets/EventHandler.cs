@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class EventHandler : MonoBehaviour
 {
     public float timeUntilFirstMessage;
+    public bool firstMessageShown = false;
     public float timeUntilThiefSpawnStart;
 
     private float gameTime;
-    
     private DisplayText textController;
 
     
@@ -23,9 +23,10 @@ public class EventHandler : MonoBehaviour
     {
         gameTime += Time.deltaTime;
 
-        if (timeUntilFirstMessage <= gameTime) {
+        if (!firstMessageShown && timeUntilFirstMessage <= gameTime) {
             print("Display Message");
-            textController.ShowText("Hej din apa");
+            firstMessageShown = true;
+            textController.ShowText("Hej din apa", 3f);
         }
     }
 }

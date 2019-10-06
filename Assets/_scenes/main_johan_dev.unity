@@ -127,6 +127,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3503239096024060995, guid: 34a5ae6bb9f1c514ba7c75eb6015dce9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224059054959742078, guid: 34a5ae6bb9f1c514ba7c75eb6015dce9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -593,7 +598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc10f433f1aeda4984a947cae6ec6f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilFirstMessage: 10
+  timeUntilFirstMessage: 2
+  firstMessageShown: 0
   timeUntilThiefSpawnStart: 0
 --- !u!4 &304549599
 Transform:
@@ -733,6 +739,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2023522502}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &778834650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8302701585540305054, guid: 34a5ae6bb9f1c514ba7c75eb6015dce9,
+    type: 3}
+  m_PrefabInstance: {fileID: 10693985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &778834652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778834650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f99e570c23bb1b47890d37f87d5a583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &903168095
 GameObject:
   m_ObjectHideFlags: 0
