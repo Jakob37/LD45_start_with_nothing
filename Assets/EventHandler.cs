@@ -16,7 +16,7 @@ public class EventHandler : MonoBehaviour
     void Start()
     {
         gameTime = 0;
-        story_controller = FindObjectOfType<DisplayText>();
+        textController = FindObjectOfType<DisplayText>();
     }
 
     void Update()
