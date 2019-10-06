@@ -10,7 +10,7 @@ public class DisplayScore : MonoBehaviour
     void Awake() {
         ui_text = GetComponent<Text>();
         int score = Score.Tomatoes;
-        SetText("Big Tomato win again! You collected " + score + " tomatoes");
+        SetText("Big Tomato wins again! You collected " + score + " tomatoes");
     }
 
     public void SetText(string new_text) {
