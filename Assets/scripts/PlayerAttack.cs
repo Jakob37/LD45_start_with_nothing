@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private AudioController audio_controller;
+    private ExclamationMark exclamation_mark;
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
@@ -16,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Awake() {
         audio_controller = FindObjectOfType<AudioController>();
+        exclamation_mark = GetComponentInChildren<ExclamationMark>();
     }
 
     void Start() {
@@ -23,21 +25,21 @@ public class PlayerAttack : MonoBehaviour
     }
 
     void Update() {
+        print(timeBtwAttack);
         if (timeBtwAttack <= 0) {
-            if(Input.GetKey(KeyCode.E)) {
-              audio_controller.MakeShout();
-              Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+            if (Input.GetKey(KeyCode.E)) {
+                audio_controller.MakeShout();
+                exclamation_mark.Activate();
 
-              for (int i = 0; i < enemiesToDamage.Length; i++) {
-                  if (enemiesToDamage[i].GetComponent<ThievingBehaviour>() != null) {
-                      enemiesToDamage[i].GetComponent<ThievingBehaviour>().Scare(damage);
-                  }
-                  // else if (enemiesToDamage[i].GetComponent<BigTomatoGuy>() != null) {
-                  //     enemiesToDamage[i].GetComponent<BigTomatoGuy>().Scare(damage);
-                  // }
-              }
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+
+                for (int i = 0; i < enemiesToDamage.Length; i++) {
+                    if (enemiesToDamage[i].GetComponent<ThievingBehaviour>() != null) {
+                        enemiesToDamage[i].GetComponent<ThievingBehaviour>().Scare(damage);
+                    }
+                }
+                timeBtwAttack = startTimeBtwAttack;
             }
-            timeBtwAttack = startTimeBtwAttack;
         }
         else {
             timeBtwAttack -= Time.deltaTime;

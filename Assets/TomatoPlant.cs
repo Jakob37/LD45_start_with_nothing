@@ -128,11 +128,11 @@ public class TomatoPlant : MonoBehaviour
     private void MakeTomato() {
 
         int position = get_an_availible_position();
-        if (position < 0)
-        {
+        if (position < 0) {
             return;
         }
         TomatoFruit tomato = Instantiate(tomato_prefab);
+        tomato.transform.parent = gameObject.transform;
         tomato.setPosition(position);
 
         tomatoes.Add(tomato);
