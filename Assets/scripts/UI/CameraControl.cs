@@ -7,7 +7,7 @@ public class CameraControl : MonoBehaviour
     private Camera cam;
     private float targetZoom;
     private float zoomFactor = 0f;
-    private float smoothTime = 4.3f;
+    private float smoothTime = 0.3f;
 
     public float zoomInLevel = 0.8f;
     public float zoomOutLevel = 2f;

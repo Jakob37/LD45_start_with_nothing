@@ -29,7 +29,9 @@ public class Spawner : MonoBehaviour
     }
 
     void Update() {
-        current_time += Time.deltaTime;
+        if (is_active) {
+            current_time += Time.deltaTime;
+        }
         if (current_time > spawn_time && is_active) {
             SpawnUnits(spawn_prefab, spawn_number, spawn_sides_only);
             current_time -= spawn_time;
