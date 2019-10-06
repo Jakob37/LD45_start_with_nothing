@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     public GameObject spawn_prefab;
 
     private float current_time;
+    public bool is_active;
 
     private SpawnPattern spawn_pattern;
     public bool spawn_sides_only;
@@ -25,7 +26,7 @@ public class Spawner : MonoBehaviour
 
     void Update() {
         current_time += Time.deltaTime;
-        if (current_time > spawn_time) {
+        if (current_time > spawn_time && is_active) {
             SpawnUnits(spawn_prefab, spawn_number, spawn_sides_only);
             current_time -= spawn_time;
         }
@@ -51,12 +52,20 @@ public class Spawner : MonoBehaviour
         float padding = 0.5f;
 
         int side;
+        List<int> choices = new List<int>();
         if (!horizontal_sides_only) {
-            side = Random.Range(0, 3);
+            choices.Add(0);
+            choices.Add(1);
+            choices.Add(2);
+            choices.Add(3);
         }
         else {
-            side = Random.Range(0, 1) * 2 + 1;
+            choices.Add(1);
+            choices.Add(3);
         }
+
+        side = choices[Random.Range(0, choices.Count)];
+        print("Side selected: " + side);
 
         float xpos = 0;
         float ypos = 0;
@@ -71,7 +80,7 @@ public class Spawner : MonoBehaviour
             ypos = right_positions.y + padding;
         }
         else {
-            xpos = right_positions.x - padding;
+            xpos = left_positions.x - padding;
         }
 
         if (side == 0 || side == 2) {

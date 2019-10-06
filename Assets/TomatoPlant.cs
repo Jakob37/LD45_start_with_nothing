@@ -110,8 +110,7 @@ public class TomatoPlant : MonoBehaviour
             growth_time = growth_time + Time.deltaTime;
             UpdateGrowth();
         }
-        else if (fruit_time < fruit_time_offset)
-        {
+        else if (fruit_time < fruit_time_offset) {
             fruit_time = fruit_time + Time.deltaTime;
         }
         else if (growth_time > maturation_time &&
@@ -129,7 +128,7 @@ public class TomatoPlant : MonoBehaviour
     private void MakeTomato() {
 
         int position = get_an_availible_position();
-        if(position < 0)
+        if (position < 0)
         {
             return;
         }
