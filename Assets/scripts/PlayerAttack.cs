@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    private AudioController audio_controller;
+
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
@@ -12,6 +14,10 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public int damage;
 
+    void Awake() {
+        audio_controller = FindObjectOfType<AudioController>();
+    }
+
     void Start() {
         
     }
@@ -19,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
     void Update() {
         if (timeBtwAttack <= 0) {
             if(Input.GetKey(KeyCode.E)) {
-              print("punch");
+              audio_controller.MakeShout();
               Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 
               for (int i = 0; i < enemiesToDamage.Length; i++) {
