@@ -57,7 +57,7 @@ public class ThievingBehaviour : MonoBehaviour
         movement.IsFlipped = prior_position_x < transform.position.x;
     }
 
-    private void LookForNewTarget(ThievingTarget thieving_target_type) {
+    public void LookForNewTarget(ThievingTarget thieving_target_type) {
 
         bool no_thief_target = false;
         if (thieving_target_type == ThievingTarget.TomatoFruit) {
@@ -92,17 +92,6 @@ public class ThievingBehaviour : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.gameObject.GetComponent<TomatoFruit>() != null) {
-            TomatoFruit tomato = coll.gameObject.GetComponent<TomatoFruit>();
-            if (tomato.IsRipe()) {
-                Destroy(tomato.gameObject);
-                LeaveArea();
-                is_done = true;
-            }
-        }
-    }
-
     public void Scare(float scariness) {
         print("Enemy HIT");
         morale -= scariness;
@@ -111,7 +100,8 @@ public class ThievingBehaviour : MonoBehaviour
         }
     }
 
-    private void LeaveArea() {
+    public void LeaveArea() {
         currentTarget = start_position;
+        is_done = true;
     }
 }
