@@ -36,6 +36,7 @@ public class BigTomatoLady : MonoBehaviour
         else {
             direction = Direction.left;
         }
+        movement.IsMoving = true;
     }
 
     void Update() {
