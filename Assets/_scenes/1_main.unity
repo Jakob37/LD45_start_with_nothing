@@ -1164,7 +1164,7 @@ PrefabInstance:
     - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: spawn_times.Array.data[1].startTime
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8206864472605631265, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
@@ -1209,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: spawn_times.Array.data[1].startTime
-      value: 60
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
@@ -1249,7 +1249,7 @@ PrefabInstance:
     - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: spawn_times.Array.data[1].startTime
-      value: 30
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
@@ -1264,7 +1264,7 @@ PrefabInstance:
     - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: spawn_times.Array.data[2].startTime
-      value: 45
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
@@ -1724,12 +1724,12 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[4].message
-      value: Thieves are coming to steal your tomatoes!
+      value: 'Big Tomato are sending people to sabotage your operation. '
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[0].message
-      value: Starting from nothing, you will build your own Tomato Empire!
+      value: This is you, an aspiring tomato farmer starting with nothing.
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1739,12 +1739,12 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[3].message
-      value: 
+      value: Big Tomato doesn't like competition.
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[6].message
-      value: Oh no! Big Tomato heard about your success
+      value: Big Tomato underestimated you.
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1894,7 +1894,7 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[10].timeUntilMessage
-      value: 103
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1934,7 +1934,7 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[5].timeUntilMessage
-      value: 34
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1949,7 +1949,7 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[7].timeUntilMessage
-      value: 74
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1959,7 +1959,7 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[11].timeUntilMessage
-      value: 107
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
@@ -1979,17 +1979,32 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[9].timeUntilMessage
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[8].timeUntilMessage
-      value: 77
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[8].displayTime
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[4].timeUntilMessage
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[3].timeUntilMessage
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
+        type: 3}
+      propertyPath: messageEvents.Array.data[6].timeUntilMessage
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49550fd2fcc09e14d9d31f5708371d6c, type: 3}
