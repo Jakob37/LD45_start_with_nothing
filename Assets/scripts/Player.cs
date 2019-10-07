@@ -139,7 +139,7 @@ public class Player : MonoBehaviour {
         if (shop_spot.HasShopSeed()) {
             was_bought = BuySeed(shop_spot.GetShopSeed());
         }
-        else if (shop_spot.HasShopShovel()) {
+        else if (shop_spot.HasShopShovel() && !inventory.HasShovel) {
             was_bought = BuyShovel(shop_spot.GetShopShovel());
             if (was_bought) {
                 basic_animator.UpdateFrames(shovel_frames);

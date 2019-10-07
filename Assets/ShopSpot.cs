@@ -78,7 +78,12 @@ public class ShopSpot : MonoBehaviour
         if (curr_respawn_time > 0) {
             curr_respawn_time -= Time.deltaTime;
             if (curr_respawn_time <= 0) {
-                shop_object = Instantiate(shop_seed_prefab);
+                if (shop_spot_type == SpotType.Seed) {
+                    shop_object = Instantiate(shop_seed_prefab);
+                }
+                else {
+                    shop_object = Instantiate(shop_shovel_prefab);
+                }
                 shop_object.transform.position = gameObject.transform.position;
             }
         }
