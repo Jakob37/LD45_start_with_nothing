@@ -46,9 +46,7 @@ public class Inventory : MonoBehaviour
     }
 
     void Update() {
-
         string inventory_text = "Tomatoes: " + tomatoes + "\n" + "Seeds: " + seeds;
-
         inv_text.SetText(inventory_text);
     }
 

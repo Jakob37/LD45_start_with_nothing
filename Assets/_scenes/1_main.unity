@@ -180,16 +180,6 @@ PrefabInstance:
       propertyPath: dig_time
       value: 2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6147788098305222754, guid: 7fb77674f798cdf44a854b2e3e093b65,
-        type: 3}
-      propertyPath: start_tomatoes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6147788098305222754, guid: 7fb77674f798cdf44a854b2e3e093b65,
-        type: 3}
-      propertyPath: start_with_shovel
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fb77674f798cdf44a854b2e3e093b65, type: 3}
 --- !u!1001 &379409433
@@ -1880,7 +1870,7 @@ PrefabInstance:
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
       propertyPath: messageEvents.Array.data[8].message
-      value: Scare them away with <X>
+      value: Scare them away with double <X>
       objectReference: {fileID: 0}
     - target: {fileID: 2173781469677830751, guid: 49550fd2fcc09e14d9d31f5708371d6c,
         type: 3}
