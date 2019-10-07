@@ -11,10 +11,13 @@ public class Player : MonoBehaviour {
     private AudioController audio_controller;
 
     public float move_speed = 0.01f;
+    public int shovel_duration;
+    private int curr_shovel_duration;
     public Sprite dead_sprite;
     private bool alive = true;
     public float dig_time;
     public Sprite[] shovel_frames;
+    public Sprite[] walking_frames;
 
     private float freeze_time;
 
@@ -56,6 +59,12 @@ public class Player : MonoBehaviour {
             inventory.HasShovel && freeze_time <= 0) {
             DigHole(dig_time);
             audio_controller.MakeDigSound();
+            curr_shovel_duration -= 1;
+            if (curr_shovel_duration <= 0) {
+                inventory.BreakShovel();
+                audio_controller.MakeCrashSound();
+                basic_animator.UpdateFrames(walking_frames);
+            }
         }
     }
 
@@ -135,6 +144,7 @@ public class Player : MonoBehaviour {
             if (was_bought) {
                 basic_animator.UpdateFrames(shovel_frames);
             }
+            curr_shovel_duration = shovel_duration;
         }
 
         if (was_bought) {

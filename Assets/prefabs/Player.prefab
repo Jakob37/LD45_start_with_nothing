@@ -107,11 +107,15 @@ MonoBehaviour:
   hole_prefab: {fileID: 9112820804082952331, guid: ecf313db6a8d6de438d68be6df2758c1,
     type: 3}
   move_speed: 0.01
+  shovel_duration: 5
   dead_sprite: {fileID: 0}
-  dig_time: 2.5
+  dig_time: 3
   shovel_frames:
   - {fileID: -2320061051777747270, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
   - {fileID: -7543076018123570421, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
+  walking_frames:
+  - {fileID: 6438862032139102022, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
+  - {fileID: 8337063234793068588, guid: b954d20eeb61016458b4bdaa1a702ea6, type: 3}
 --- !u!50 &50498154828484592
 Rigidbody2D:
   serializedVersion: 4

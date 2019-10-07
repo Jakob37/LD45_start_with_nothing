@@ -66,18 +66,12 @@ public class ShopSpot : MonoBehaviour
 
     public void BuyObject() {
         shop_object = null;
-
-        if (shop_spot_type == SpotType.Seed) {
-            curr_respawn_time = seed_respawn_time;
-        }
+        curr_respawn_time = seed_respawn_time;
     }
 
     void Update() {
         UpdateDisplay();
-
-        if (shop_spot_type == SpotType.Seed) {
-            UpdateSeedRespawn();
-        }
+        UpdateSeedRespawn();
     }
 
     private void UpdateSeedRespawn() {

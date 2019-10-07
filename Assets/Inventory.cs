@@ -82,6 +82,10 @@ public class Inventory : MonoBehaviour
         tomatoes -= price;
     }
 
+    public void BreakShovel() {
+        has_shovel = false;
+    }
+
     public void OnDestroy() {
         Score.Tomatoes = tomatoes;
     }

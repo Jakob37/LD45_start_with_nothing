@@ -175,6 +175,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7138196029286446638, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 3}
+      propertyPath: startTimeBtwAttack
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fb77674f798cdf44a854b2e3e093b65, type: 3}
 --- !u!1001 &379409433
@@ -787,16 +792,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.056
       objectReference: {fileID: 0}
-    - target: {fileID: 7249001416361394050, guid: d5a25510155edc344978693270306194,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1853910733
-      objectReference: {fileID: 0}
-    - target: {fileID: 7249001416361394050, guid: d5a25510155edc344978693270306194,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7249001416383974573, guid: d5a25510155edc344978693270306194,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -805,7 +800,7 @@ PrefabInstance:
     - target: {fileID: 7249001416383974573, guid: d5a25510155edc344978693270306194,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7249001417600905919, guid: d5a25510155edc344978693270306194,
         type: 3}
@@ -815,7 +810,12 @@ PrefabInstance:
     - target: {fileID: 7249001417600905919, guid: d5a25510155edc344978693270306194,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284845882695450575, guid: d5a25510155edc344978693270306194,
+        type: 3}
+      propertyPath: seed_respawn_time
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a25510155edc344978693270306194, type: 3}
@@ -1051,6 +1051,111 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawners
       objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawner_events.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: is_active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].startTime
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_rate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[2].startTime
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[2].spawn_count
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[2].spawn_rate
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: debug_name
+      value: Thief
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_time
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: is_active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[0].startTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[0].spawn_count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[0].spawn_rate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].startTime
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: spawn_times.Array.data[1].spawn_rate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
+        type: 3}
+      propertyPath: debug_name
+      value: Guy
+      objectReference: {fileID: 0}
     - target: {fileID: 1727030615809944624, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
         type: 3}
       propertyPath: m_Name
@@ -1175,111 +1280,6 @@ PrefabInstance:
         type: 3}
       propertyPath: spawn_times.Array.data[1].spawn_rate
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_time
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: is_active
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[0].startTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[0].spawn_count
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[0].spawn_rate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[1].startTime
-      value: 94
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[1].spawn_count
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[1].spawn_rate
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2091182945291848316, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: debug_name
-      value: Guy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawner_events.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_time
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: is_active
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[1].startTime
-      value: 68
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[1].spawn_count
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[1].spawn_rate
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[2].startTime
-      value: 94
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[2].spawn_count
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: spawn_times.Array.data[2].spawn_rate
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8523999416064728855, guid: b9981a9a5fcdaaf41af83e8e929ab46e,
-        type: 3}
-      propertyPath: debug_name
-      value: Thief
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9981a9a5fcdaaf41af83e8e929ab46e, type: 3}
