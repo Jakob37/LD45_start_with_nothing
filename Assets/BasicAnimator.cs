@@ -27,12 +27,18 @@ public class BasicAnimator : MonoBehaviour
             }
         }
 
-        if (movement.IsFlipped) {
-            sprite_renderer.transform.localScale = new Vector3(-1, 1, 1);
+        int scale_modifier = 1;
+        if (movement.IsFlipped && sprite_renderer.transform.localScale.x > 0) {
+            scale_modifier = -1;
         }
-        else {
-            sprite_renderer.transform.localScale = new Vector3(1, 1, 1);
+        else if (!movement.IsFlipped && sprite_renderer.transform.localScale.x < 0)
+        {
+            scale_modifier = -1;
         }
+        sprite_renderer.transform.localScale = new Vector3(
+            sprite_renderer.transform.localScale.x * scale_modifier,
+            sprite_renderer.transform.localScale.y,
+            sprite_renderer.transform.localScale.z);
     }
 
     private int ShiftWalkFrame(int curr_walk_frame, Sprite[] frames) {
