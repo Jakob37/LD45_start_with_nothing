@@ -48,9 +48,6 @@ public class Inventory : MonoBehaviour
     void Update() {
 
         string inventory_text = "Tomatoes: " + tomatoes + "\n" + "Seeds: " + seeds;
-        if (has_shovel) {
-            inventory_text += "\n Has shovel";
-        }
 
         inv_text.SetText(inventory_text);
     }

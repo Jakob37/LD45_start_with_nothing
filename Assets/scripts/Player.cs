@@ -135,6 +135,9 @@ public class Player : MonoBehaviour {
 
     private void ShopSpotCollide(ShopSpot shop_spot) {
 
+        print(shop_spot);
+        print(inventory.HasShovel);
+
         bool was_bought = false;
         if (shop_spot.HasShopSeed()) {
             was_bought = BuySeed(shop_spot.GetShopSeed());
@@ -143,8 +146,8 @@ public class Player : MonoBehaviour {
             was_bought = BuyShovel(shop_spot.GetShopShovel());
             if (was_bought) {
                 basic_animator.UpdateFrames(shovel_frames);
+                curr_shovel_duration = shovel_duration;
             }
-            curr_shovel_duration = shovel_duration;
         }
 
         if (was_bought) {
@@ -161,7 +164,7 @@ public class Player : MonoBehaviour {
     }
 
     private bool BuyShovel(ShopShovel shop_shovel) {
-        if (inventory.Tomatoes >= shop_shovel.price) {
+        if (inventory.Tomatoes >= shop_shovel.price && !inventory.HasShovel) {
             inventory.BuyShovel(shop_shovel.price);
             return true;
         }
